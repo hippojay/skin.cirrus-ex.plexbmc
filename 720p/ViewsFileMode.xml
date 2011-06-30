@@ -1,0 +1,240 @@
+<includes>
+  <include name="CommonRootView">
+  
+	<!-- BACKGROUND PANEL FOR LIST VIEW (not sure why this is here, but it works) -->
+	<control type="group">
+	<animation type="WindowOpen" reversible="false">
+			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+			<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+			<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+			<effect type="fade" start="100" end="0" time="300" />
+			</animation>      
+		<include>Window_OpenClose_Animation</include>    
+		<control type="group">
+			<include>VisibleFadeEffect</include>
+			<visible>Control.IsVisible(55)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>120</posy>
+				<width>1280</width>
+				<height>480</height>
+				<texture border="20">videoinfoback.png</texture>
+			</control>
+		</control>
+	</control>
+  
+    <control type="group">
+	<animation type="WindowOpen" reversible="false">
+			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+			<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+			<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+			<effect type="fade" start="100" end="0" time="300" />
+			</animation>      
+      <visible>Control.IsVisible(55)</visible>
+      <include>VisibleFadeEffect</include>
+      <control type="list" id="55">
+        <posx>70</posx>
+        <posy>138</posy>
+        <width>690</width>
+        <height>450</height>
+        <onleft>2</onleft>
+        <onright>60</onright>
+        <onup>55</onup>
+        <ondown>55</ondown>
+        <viewtype label="535">list</viewtype>
+        <pagecontrol>60</pagecontrol>
+        <scrolltime>200</scrolltime>
+        <visible>![Window.IsVisible(VideoLibrary) + Container.Content(TVShows)]</visible>
+        <itemlayout height="40" width="580">
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>700</width>
+            <height>40</height>
+            <aligny>bottom</aligny>
+            <texture border="2,2,2,2" diffuse="rowdiffuse.png">rowblank2.png</texture>
+          </control>
+          <control type="label">
+            <posx>10r</posx>
+            <posy>0</posy>
+            <width>660</width>
+            <height>40</height>
+            <font>cirrus_24</font>
+            <textcolor>grey2</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>right</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <posx>660</posx>
+            <posy>0</posy>
+            <width>100</width>
+            <height>40</height>
+            <font>cirrus_16</font>
+            <textcolor>grey2</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>right</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+            <animation effect="slide" start="0,0" end="20,0" delay="0" time="0" condition="![Window.IsVisible(VideoLibrary) | Window.IsVisible(VideoFiles)]">conditional</animation>
+          </control>
+          <control type="image">
+            <posx>665</posx>
+            <posy>14</posy>
+            <width>20</width>
+            <height>16</height>
+            <texture>$INFO[ListItem.Overlay]</texture>
+            <visible>Window.IsVisible(VideoLibrary) | Window.IsVisible(VideoFiles)</visible>
+          </control>
+        </itemlayout>
+        <focusedlayout height="40" width="580">
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>700</width>
+            <height>40</height>
+            <aligny>bottom</aligny>
+            <texture border="2,2,2,2" diffuse="rowdiffuse.png">rowblank2.png</texture>
+          </control>
+		  <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>700</width>
+            <height>40</height>
+            <aligny>bottom</aligny>
+            <texture>listwhitegradient.png</texture>
+          </control>
+          <control type="label">
+            <posx>10r</posx>
+            <posy>0</posy>
+            <width>660</width>
+            <height>40</height>
+            <font>cirrus_24</font>
+            <textcolor>white</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>right</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <posx>660</posx>
+            <posy>0</posy>
+            <width>100</width>
+            <height>40</height>
+            <font>cirrus_16</font>
+            <textcolor>grey2</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>right</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+            <animation effect="slide" start="0,0" end="20,0" delay="0" time="0" condition="![Window.IsVisible(VideoLibrary) | Window.IsVisible(VideoFiles)]">conditional</animation>
+          </control>
+          <control type="image">
+            <posx>665</posx>
+            <posy>14</posy>
+            <width>20</width>
+            <height>16</height>
+            <texture>$INFO[ListItem.Overlay]</texture>
+            <visible>Window.IsVisible(VideoLibrary) | Window.IsVisible(VideoFiles)</visible>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="scrollbar" id="60">
+        <posx>770</posx>
+        <posy>125</posy>
+        <width>25</width>
+        <height>460</height>
+        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+        <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+        <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+        <textureslidernib>ScrollBarNib.png</textureslidernib>
+        <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+        <onleft>55</onleft>
+        <onright>2</onright>
+        <showonepage>false</showonepage>
+        <orientation>vertical</orientation>
+        <visible>Control.IsVisible(55)</visible>
+      </control>
+      <control type="group">
+        <posx>850</posx>
+        <posy>100</posy>
+        <visible>Control.IsVisible(55)</visible>
+        <control type="image">
+          <posx>0</posx>
+          <posy>40</posy>
+          <width>360</width>
+          <height>440</height>
+          <aspectratio aligny="center">keep</aspectratio>
+          <fadetime>IconCrossfadeTime</fadetime>
+          <texture>$INFO[ListItem.Icon]</texture>
+		  <visible>!Container.Content(Genres)</visible>
+        </control>
+        <!-- GenreFanart Mod -->
+        <control type="image">
+	  <posx>0</posx>
+	  <posy>40</posy>
+	  <width>360</width>
+	  <height>440</height>
+	  <aspectratio aligny="center">keep</aspectratio>
+	  <fadetime>IconCrossfadeTime</fadetime>
+	  <texture fallback="special://skin/extras/moviegenres/Unknown.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].png</texture>
+	  <visible>Container.Content(Genres) + Window.IsVisible(VideoLibrary)</visible>
+        </control>
+		<control type="image">
+	  <posx>0</posx>
+	  <posy>40</posy>
+	  <width>360</width>
+	  <height>440</height>
+	  <aspectratio aligny="center">keep</aspectratio>
+	  <fadetime>IconCrossfadeTime</fadetime>
+	  <texture fallback="special://skin/extras/musicgenres/default.png">special://skin/extras/musicgenres/$INFO[ListItem.Label].png</texture>
+	   <visible>Container.Content(Genres) + Window.IsVisible(MusicLibrary)</visible>
+        </control>
+		<control type="image">
+        <posx>-851</posx>
+        <posy>27</posy>
+        <width>385</width>
+        <height>200</height>
+		<texture>DialogBackground.png</texture>
+		<bordertexture border="8">ThumbBorder.png</bordertexture>
+		<bordersize>12</bordersize>
+		<colordiffuse>888A8A8A</colordiffuse>
+        <aspectratio>stretch</aspectratio>
+		<visible>Skin.Hassetting(videowindowglobal)</visible>
+		<visible>Player.HasVideo</visible>
+		<visible>Control.IsVisible(55)</visible>
+		<visible>!Skin.HasSetting(videowindownoborder)</visible>
+      </control>
+			<control type="videowindow" id="8">
+		        <posx>-838</posx>
+		        <posy>37</posy>
+		        <width>362</width>
+		        <height>180</height>
+		        <visible>Skin.Hassetting(videowindowglobal)</visible>
+				<visible>Control.IsVisible(55)</visible>
+		     </control> 
+		  <control type="label">
+          <description>Title label</description>
+          <posx>-820</posx>
+          <posy>192</posy>
+          <height>30</height>
+          <width>330</width>
+          <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=orange] (,)[/COLOR]]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>cirrus_20</font>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
+		  <visible>Skin.HasSetting(videowindowglobal)</visible>
+		  <visible>Player.HasVideo</visible>
+		  <visible>Control.IsVisible(55)</visible>
+        </control>
+      </control>
+    </control>
+  </include>
+</includes>

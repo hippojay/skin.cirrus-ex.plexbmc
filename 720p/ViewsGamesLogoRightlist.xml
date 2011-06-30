@@ -1,0 +1,319 @@
+<includes>
+<!-- ===================================================================================== -->
+<!-- ============================== Games Logo Rightlist VIEW ID 596============================== -->
+<!-- =================================== TV Shows only =================================== -->
+	<include name="GamesLogo_Rightlist">
+		<control type="group">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+			<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+			<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+			<effect type="fade" start="100" end="0" time="300" />
+			</animation>      
+			<visible>Control.IsVisible(596)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="image"> <!-- bottom bar background -->
+				<posx>0</posx>
+				<posy>155r</posy>
+				<width>1280</width>
+				<height>700</height>
+				<aspectratio>stretch</aspectratio>
+ 				<texture>rightlistbackground.png</texture>
+			</control>
+			<control type="image"> <!-- bottom bar background -->
+				<posx>0</posx>
+				<posy>50r</posy>
+				<width>1280</width>
+				<height>700</height>
+				<aspectratio>stretch</aspectratio>
+ 				<texture>rightlistbackground.png</texture>
+				<visible>Control.IsVisible(596)</visible>
+			</control>
+			<control type="image"> <!-- Black gradient up the top -->
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>300</height>
+				<texture>blackgradientvert.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image"> <!-- right gradient -->
+				<posx>700r</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>720</height>
+				<texture flipx="true">blackgradient.png</texture>
+			</control>
+			<control type="image">
+        <posx>20</posx>
+        <posy>120</posy>
+        <width>385</width>
+        <height>200</height>
+		<texture>DialogBackground.png</texture>
+		<bordertexture border="8">ThumbBorder.png</bordertexture>
+		<bordersize>12</bordersize>
+		<colordiffuse>888A8A8A</colordiffuse>
+        <aspectratio>stretch</aspectratio>
+		<visible>Skin.Hassetting(videowindowglobal)</visible>
+		<visible>Player.HasVideo</visible>
+		<visible>!Skin.Hassetting(videowindownoborder)</visible>
+		<visible>Control.IsVisible(596)</visible>
+      </control>
+			<control type="videowindow" id="8">
+		        <posx>32</posx>
+		        <posy>130</posy>
+		        <width>362</width>
+		        <height>180</height>
+		        <visible>Skin.Hassetting(videowindowglobal)</visible>
+				<visible>Control.IsVisible(596)</visible>
+		     </control> 
+		  <control type="label">
+          <description>Title label</description>
+          <posx>48</posx>
+          <posy>280</posy>
+          <height>30</height>
+          <width>330</width>
+          <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=orange] (,)[/COLOR]]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>cirrus_20</font>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
+		  <visible>Skin.HasSetting(videowindowglobal)</visible>
+		  <visible>Player.HasVideo</visible>
+		  <visible>Control.IsVisible(596)</visible>
+        </control>
+			<!-- list -->
+			<control type="fixedlist" id="596">
+				<posx>600r</posx>
+				<posy>50</posy>
+				<width>575</width>
+				<height>515</height>
+				<onleft>2</onleft>
+				<onright>XBMC.PlayMedia($INFO[Skin.String(Menu_GameCustom1_Label)]/$INFO[ListItem.label]/trailer.mp4,1,noresume)</onright>
+				<onup>596</onup>
+				<ondown>596</ondown>
+				<viewtype label="41111">list</viewtype>
+				<focusposition>2</focusposition>
+				<movement>9</movement>
+				<scrolltime>200</scrolltime>
+				<preloaditems>2</preloaditems>
+				<visible>substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
+				<itemlayout height="100" width="580">
+					<control type="group"> <!-- Logo Mod -->
+						<posx>0</posx>
+						<posy>0</posy>
+					</control>
+					<control type="image"> <!-- Logo mod -->
+							<posx>260</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>80</height>
+							<aspectratio scalediffuse="false" aligny="center" align="right">keep</aspectratio> 
+							<fadetime>200</fadetime>
+							<texture border="2" fallback="fallback.png">special://skin/extras/games/logos/$INFO[ListItem.Label].png</texture>
+							<colordiffuse>888A8A8A</colordiffuse>							
+						</control>
+				</itemlayout>
+				<focusedlayout height="100" width="580">
+						<control type="image"> <!-- banner mod -->
+							<posx>260</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>80</height>
+							<aspectratio scalediffuse="false" aligny="center" align="right">keep</aspectratio> 
+							<fadetime>200</fadetime>
+							<texture border="2" fallback="fallback.png">special://skin/extras/games/logos/$INFO[ListItem.Label].png</texture>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- Tv show info down thebottom -->	
+			<control type="group">
+				<posx>20</posx>
+				<posy>360</posy>
+				<visible>Control.IsVisible(593) | !Window.IsVisible(VideoFiles) | Container.Content(genres) | Window.IsVisible(VideoLibrary)</visible>
+				<control type="group">
+					<visible>-</visible>
+					<posx>0</posx>
+					<posy>-30</posy>
+					<control type="image">
+						<posx>0</posx>
+						<posy>20</posy>
+						<width>240</width>
+						<height>360</height>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+						<fadetime>IconCrossfadeTime</fadetime>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<bordertexture border="8">ThumbBorder.png</bordertexture>
+						<bordersize>8</bordersize>
+					</control>
+				</control>
+				<control type="group">
+					<posx>250</posx>
+					<posy>210</posy>
+					<visible>-</visible>
+					<control type="label">
+						<description>Genre label</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>550</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Genre,[COLOR=orange]$LOCALIZE[515]:[/COLOR] ]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>cirrus_24</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<!-- Addon Info -->
+					<control type="label">
+						<description>Genre label</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>550</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Property(Addon.Type),[COLOR=orange]$LOCALIZE[515]:[/COLOR] ]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>cirrus_24</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="textbox"> <!-- CUSTOM mod plotoutline -->
+						<description>plot</description>
+						<posx>0</posx>
+						<posy>25</posy>
+						<width>700</width>
+						<height>68</height>
+						<label>$INFO[ListItem.Plot]</label>
+						<align>justify</align>
+						<aligny>top</aligny>
+						<font>cirrus_20</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<visible>-</visible>
+					</control>
+					<!-- Addon Info -->
+					<control type="textbox">
+						<description>plot</description>
+						<posx>0</posx>
+						<posy>25</posy>
+						<width>700</width>
+						<height>68</height>
+						<label>$INFO[ListItem.Property(Addon.Description)]</label>
+						<align>justify</align>
+						<aligny>top</aligny>
+						<font>cirrus_20</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<visible>-</visible>
+					</control>
+					<control type="label">
+						<description>Year Label</description>
+						<posx>0</posx>
+						<posy>110</posy>
+						<width>320</width>
+						<height>30</height>
+						<label>$INFO[ListItem.Year]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>cirrus_26</font>
+						<textcolor>orange</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+				<control type="group">
+					<posx>20</posx>
+					<posy>210</posy>
+					<visible>Skin.HasSetting(posterlessRightList)</visible>
+					<control type="label">
+						<description>Genre label</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>550</width>
+						<height>25</height>
+						<label>$INFO[ListItem.Genre,[COLOR=orange]$LOCALIZE[515]:[/COLOR] ]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>cirrus_24</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="textbox">
+						<description>plot</description>
+						<posx>0</posx>
+						<posy>25</posy>
+						<width>920</width>
+						<height>68</height>
+						<label>$INFO[ListItem.Plot]</label>
+						<align>justify</align>
+						<aligny>top</aligny>
+						<font>cirrus_20</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+					<control type="label">
+						<description>Year Label</description>
+						<posx>0</posx>
+						<posy>110</posy>
+						<width>320</width>
+						<height>30</height>
+						<label>$INFO[ListItem.Year]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>cirrus_35</font>
+						<textcolor>orange</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+				<control type="image">
+					<width>150</width>
+					<height>87</height>
+					<posx>240</posx>
+					<posy>68r</posy>
+					<aspectratio>keep</aspectratio>
+					<align>right</align>
+					<aligny>bottom</aligny>
+					<texture border="2">$INFO[listitem.Studio,flagging/studios/,.png]</texture>
+				</control>
+				<control type="image">
+					<posx>284r</posx>
+					<posy>205</posy>
+					<width>267</width>
+					<height>148</height>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture border="10">DialogBackground.png</texture>
+					<visible>!Window.IsVisible(VideoFiles) + !Window.IsVisible(VideoLibrary)</visible>
+				</control>
+				<control type="image">
+					<posx>282r</posx>
+					<posy>207</posy>
+					<width>263</width>
+					<height>144</height>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture fallback="splashm.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<visible>!Window.IsVisible(VideoFiles) + !Container.Content(Genres) + !Window.IsVisible(VideoLibrary)</visible>
+				</control>
+				<control type="multiimage">
+					<posx>282r</posx>
+					<posy>207</posy>
+					<width>263</width>
+					<height>144</height>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<timeperimage>5000</timeperimage>
+					<imagepath background="true">$INFO[Skin.String(Menu_GameCustom1_Label)]/$INFO[ListItem.label]/extrathumb</imagepath>
+					<visible>!Window.IsVisible(VideoFiles) + !Container.Content(Genres) + !Window.IsVisible(VideoLibrary)</visible>			
+				</control>
+		</control>
+		</control>
+	</include>
+</includes>

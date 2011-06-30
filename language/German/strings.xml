@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <!-- Misc labels -->
+  <string id="31000">Ändere dein</string>
+  <string id="31001">Liebe</string>
+  <string id="31002">Hass</string>
+  <string id="31003">Energieoptionen</string>
+  <string id="31004">Lade...</string>
+  <string id="31005">Verstecke INFO</string>
+
+  <string id="31007">Plugins</string>
+
+  <string id="31020">Kürzlich hinzugefügt</string>
+  <string id="31021">Video: Dateien</string>
+  <string id="31022">Musik: Dateien</string>
+  <string id="31023">Wiedergabe</string>
+  <string id="31024">Seite</string>
+  <string id="31025">Items</string>
+  <string id="31026">Verschiedene Optionen</string>
+  <string id="31027">Ort</string>
+ 
+  <!-- View Type labels -->
+  <string id="31028">Poster Wrap</string>
+  <string id="31029">Fanart</string>
+  <string id="40000">Fanart Poster</string>      	 <!--ViewsGamesFanart -->
+  <string id="40001">Fanart Square</string>      	 <!--ViewsGamesFanartSquare -->
+  <string id="40002">Fanart Wide</string>       	 <!--ViewsGamesFanartWide -->
+  <string id="40003">Rightlist</string>       		 <!--ViewsGamesRightlist -->
+  <string id="40004">Rightlist Square</string>       <!--ViewsGamesRightlist -->
+  <string id="40005">Rightlist Landscape</string>    <!--ViewsGamesRightlistLandscape  -->
+  <string id="40006">Rightlist Logo</string> 	 	 <!--ViewsTVLogoRightlist  -->
+  <string id="41111">Rightlist Logo</string>	     <!--ViewsGamesLogoRightlist  -->
+  <string id="41112">Music Coverflow</string>
+  <string id="41113">Music Fanart</string>
+  <string id="41114">Music Rightlist</string>
+  <string id="41115">Music Wall</string>
+  <string id="41116">Fanart Slide Logo</string>
+  <string id="41117">Rightlist Banner</string>
+  <string id="41118">Banner Wall</string>
+  <string id="41119">Big Poster</string>
+  <string id="41120">Compact</string>
+  <string id="41121">Coverflow</string>			   	<!--Movie Coverflow  -->
+  <string id="41122">Fanart Slide</string>
+  <string id="41123">Half Wall</string>		    	<!--Movie Halfwall  -->
+  <string id="41124">Half Wall</string>			    <!--TV Halfwall  -->
+  <string id="41125">Banner Wall2</string>		    <!--TV Bannerwall Vertical  -->
+  <string id="41126">Wall</string>		            <!--Movie Wall  -->
+  
+  <string id="31030">Full list</string>
+  <string id="31031">Pic Thumbs</string>
+  <string id="31032">Image Wrap</string>
+
+  <!-- Extra labels -->
+  <string id="31040">Jetzt läuft</string>
+
+  <string id="31042">WIEDERGABE</string>
+  <string id="31043">PAUSE</string>
+  <string id="31044">VORSPULEN</string>
+  <string id="31045">ZURÜCK SPULEN</string>
+  <string id="31046">Audio Eigenschaften</string>
+  <string id="31047">Aktuelle Einstellungen</string>
+  <string id="31048">Visualisierungs-Einstellungen</string>
+  <string id="31049">Endet um</string>
+  <string id="31050">Angefangen um</string>
+  <string id="31052">Imdb</string>
+  <string id="31053">Jahr</string>
+  <string id="31054">Laufzeit</string>
+  <string id="31063">Staffel</string>
+  <string id="31064">Episode</string>
+  <string id="31065">Bewertung</string>
+  <string id="31066">Regisseur</string>
+  <!-- Playlist Editor labels -->
+  <string id="31055">Playlist öffnen</string>
+  <string id="31056">Playlist speichern</string>
+  <string id="31057">Playlist schliessen</string>
+  <string id="31058">System Musik-Dateien</string>
+  <string id="31059">Aktuelle Playlist</string>
+  <string id="31060">Die Datei ist stacked, wähle den zu startenden Part</string>
+  <string id="31061">Aktuell markiert</string>
+  <string id="31062">Nächste Episode:</string>
+  <!-- Skin Settings labels -->
+  <string id="31100"></string>
+  <string id="31101">Hauptmenü-Optionen</string>
+  <string id="31102">Hintergrund</string>
+  <string id="31103">Zeige "Pause" in Slide-Show</string>
+  <string id="31104">Zeige Trailer im Fenster [COLOR=grey3](nur im Video-Informationsdialog)[/COLOR]</string>
+  <string id="31105">Zeige Titel beim Hintergrundscan</string>
+  <string id="31106">Verschiedene Optionen</string>
+  <string id="31107"></string>
+  <string id="31108">Verstecke Hauptmenü-Buttons</string>
+  <string id="31109">Hauptmenü-Hintergründe</string>
+  <string id="31110">Hintergrund im Hauptmenü ändern</string>
+  <string id="31111">Verstecke</string>
+  <string id="31112">Optionen</string>
+  <string id="31113">Einzelnes Bild</string>
+  <string id="31114">Mehrere Bilder</string>
+  <string id="31115">Customizer</string>
+  <string id="31116">Addon Skripte</string>
+  <string id="31117">Zeige kürzlich hinzugefügte Videos</string>
+  <string id="31118">Hauptmenü-Submenü</string>
+  <string id="31119">Aktiviere Custom-Skript-Button</string>
+  <string id="31120">BUTTON BEZEICHNUNG</string>
+  <string id="31121">PFAD ZUM SKRIPT</string>
+  <string id="31122">Wetter Seite</string>
+  <string id="31123">Zeige "Poster" anstatt "Banner" für TV-Serien</string>
+  <string id="31124">Zeige Hintergrund "Now Playing" für Videos</string>
+  <string id="31125">Zeige Hintergrund "Now Playing" für Visualisierung</string>
+
+  <string id="31126">Aktiviere Songtext in Musik-OSD</string>
+  <string id="31127">PFAD ZUM SONGTEXT-SKRIPT</string>
+  <string id="31128">XBMC Lyrics</string>
+  <string id="31129">Aktiviere Untertitel-Download in Video OSD</string>
+  <string id="31130">PFAD ZUM UNTERTITEL-SKRIPT</string>
+
+  <string id="31140">Musik OSD</string>
+  <string id="31141">Video OSD</string>
+  
+   <!-- New labels Settings (Custom Skin Settings)  -->
+  <string id="41000">Custom Menü</string>
+  <string id="41001">Change Submenüs</string>
+  <string id="41002">Custom Home</string>
+  <string id="41003">Hauptmenü Items</string>
+  <string id="41004">Extended Mod</string>
+  <string id="41005">Mod Buttons</string>
+  
+    <!-- New labels Settings (General)  -->
+  <string id="41006">Aktiviere Kiosk Modus (Deaktiviere Slideout-Menü)</string>
+  <string id="41007">Aktiviere CDArt in der Musik-Visualisierung</string>
+  <string id="41008">Aktiviere CDArt im Hauptmenü</string>
+  <string id="41009">Aktiviere ClearArt</string>
+  <string id="41010">Aktiviere neue Medien-Flags</string>
+  <string id="41011">Aktiviere Artist-Slideshow-Skript in der Musik-Visualisierung</string>
+  <string id="41012">Aktiviere eigenen Hintergrund in der Musik-Visualisierung</string>
+  <string id="41013">Aktiviere schwarzen Hintergrund in der Musik-Visualisierung</string>
+  
+   <!-- New labels Settings (Home Window)  -->
+  <string id="41014">Schlichtes "Now Playing" im Hauptmenü</string>
+  <string id="41015">Aktiviere Videofenster im Hauptmenü</string>
+  <string id="41016">Aktiviere globales Videofenster</string>
+  <string id="41017">Schlichtes Hauptmenü (Entferne Logo und Buttons)</string>
+  <string id="41018">Aktiviere horzontales Hauptmenü</string>
+  <string id="41019">Verschiebe horizontales Hauptmenü nach unten</string>
+  <string id="41020">Aktiviere animierte Hintergründe</string>
+  <string id="41021">Globale animierte Hintergründe</string>
+  
+   <!-- New labels Settings (Background Customizer)  -->
+  <string id="41022">Power</string>
+  <string id="41023">Disk wiedergeben</string>
+  <string id="41024">Favoriten</string>
+  <string id="41025">Musik-Visualisierung</string>
+  <string id="41026">Spiele</string>
+  
+ <!-- New labels Settings (Addons Submenus)  -->
+  <string id="41027">Addon Submenü</string>
+  <string id="41028">Wähle spezielles Addon [B]1[/B]</string>
+  <string id="41029">Wähle spezielles Addon [B]2[/B]</string>
+  <string id="41030">Wähle spezielles Addon [B]3[/B]</string>
+  <string id="41031">Wähle spezielles Addon [B]4[/B]</string>
+  <string id="41032">Wähle spezielles Addon [B]5[/B]</string>
+  
+   <!-- New labels Settings (Programs Submenus)  -->
+  <string id="41033">Wähle spezielles Programm [B]1[/B]</string>
+  <string id="41034">Wähle spezielles Programm [B]2[/B]</string>
+  <string id="41035">Wähle spezielles Programm [B]3[/B]</string>
+  <string id="41036">Wähle spezielles Programm [B]4[/B]</string>
+  <string id="41037">Wähle spezielles Programm [B]5[/B]</string>
+  
+   <!-- New labels Settings (Movie Submenus)  -->
+  <string id="41038">Filme Submenü</string>
+  <string id="41039">Deaktiviere Video-Dateien</string>
+  <string id="41040">Deaktiviere Titel</string>
+  <string id="41041">Deaktiviere Genre</string>
+  <string id="41042">Deaktiviere Jahre</string>
+  <string id="41043">Deaktiviere Kürzlich Hinzugefügt</string>
+  <string id="41044">Deaktiviere Schauspieler</string>
+  <string id="41045">Deaktiviere Regisseur</string>
+  <string id="41046">Deaktiviere Datenbankupdate</string>
+  <string id="41047">Deaktiviere Video Addons</string>
+  
+  <string id="41048">Wähle Playlist [B]1[/B]</string>
+  <string id="41049">Wähle Playlist [B]2[/B]</string>
+  <string id="41050">Wähle Playlist [B]3[/B]</string>
+  <string id="41051">Wähle Playlist [B]4[/B]</string>
+  <string id="41052">Wähle Playlist [B]5[/B]</string>
+  <string id="41053">Wähle Playlist [B]6[/B]</string>
+  
+  <!-- New labels Settings (Movie Submenus Addon)  -->
+  <string id="41054">Wähle spezielles Addon [B]1[/B]</string>
+  <string id="41055">Wähle spezielles Addon [B]2[/B]</string>
+  <string id="41056">Wähle spezielles Addon [B]3[/B]</string>
+  
+   <!-- New labels Settings (Movie Submenus Favourites)  -->
+  <string id="41057">Wähle speziellen Favoriten [B]1[/B]</string>
+  <string id="41058"> - Label zuweisen</string>
+  <string id="41059"> - Favorit zuweisen</string>
+  <string id="41060">Wähle speziellen Favoriten [B]2[/B]</string>
+  <string id="41061">Wähle speziellen Favoriten [B]3[/B]</string>
+  <string id="41062">Wähle speziellen Favoriten [B]4[/B]</string>
+  <string id="41063">Wähle speziellen Favoriten [B]5[/B]</string>
+  
+   <!-- New labels Settings (TV Submenus)  -->
+  <string id="41064">TV Submenü</string>
+  
+  <!-- New labels Settings (Custom Home Items)  -->
+  <string id="41065">Setze neue eigene Items im Hauptmenü</string>
+  <string id="41066">Custom Favorit 1</string>
+  <string id="41067">Custom Favorit 2</string>
+  <string id="41068">Custom Favorit 3</string>
+  <string id="41069">Custom Favorit 4</string>
+  <string id="41070">- Wähle Playlist</string>
+  <string id="41071">Custom Favorit 5</string>
+  <string id="41072">Custom Playlist 1</string>
+  <string id="41073">Custom Playlist 2</string>
+  <string id="41074">Custom Playlist 3</string>
+  <string id="41075">Custom Playlist 4</string>
+  <string id="41076">Custom Playlist 5</string>
+  <string id="41077">Custom Playlist 6</string>
+  <string id="41078">Custom Playlist 7</string>
+  <string id="41079">Custom Playlist 8</string>
+  
+  <!-- New labels Settings (Custom MOD Items)  -->
+  <string id="41080">Aktiviere/Deaktiviere Mods</string>
+  <string id="41081">Aktiviere Banner in TV RightlistView</string>
+  <string id="41082">Aktiviere Poster in TV RightlistView</string>
+  <string id="41083">Aktiviere Widethumbs in TV RightlistView</string>
+  <string id="41084">Aktiviere Landscape.jpg für TV FanartView</string>
+  <string id="41085">Aktiviere .jpg support für BannerView</string>
+  <string id="41086">Aktiviere Extra Fanart für Movies</string>
+  <string id="41087">Aktiviere Extra Fanart für TV Shows</string>
+  <string id="41088">Aktiviere Staffel-Thumbs im Episodelevel in TV FanartView</string>
+  <string id="41089">Aktiviere Staffel-Thumbs im Seasonlevel in TV FanartView</string>
+  <string id="41090">Aktiviere Plot-Zusammenfassung für Filme in Rightlist,Coverflow,Fanart</string>
+  <string id="41091">Aktiviere IMDB Bewertung als Zahl in RightlistView</string>
+  <string id="41092">Pfad wählen für Advanced Launcher Games Artwork</string>
+  <string id="41093">- Pfad setzen</string>
+  <string id="41094">Verstecke Trailer Flag</string>
+  <string id="41095">Zeige Pfad im Video-Info-Screen</string>
+  <string id="41096">Starte Logo Downloader Script</string>
+  <string id="41097">Aktiviere Slim OSD von Zombierobot</string>
+  
+  <!-- New labels Settings (Home Items)  -->
+  <string id="41098">Addons</string>
+  <string id="41099">TV Serien</string>
+  <string id="41100">Disk wiedergeben</string>
+  
+   <!-- New labels Misc.  Cirrus Extended v2 -->
+  <string id="41101">Ansicht Optionen</string>
+  <string id="41102">Filme</string>
+  <string id="41103">TV Serien</string>
+  <string id="41104">Musik</string>
+  <string id="41105">Video Plugins</string>
+  <string id="41106">Addons</string>
+  <string id="41107">Ansichte Ein/Aus</string>
+  <string id="41108">Schalte Ein</string>
+  <string id="41109">Schalte Aus</string>
+  <string id="41110">Finde Logo</string>
+  <string id="41127">Editiere Datenbank</string>
+  <string id="41128">Pfad:</string>
+  <string id="41129">Total</string>
+  <string id="41130">Gesehen</string>
+  <string id="41131">Ungesehen</string>
+  <string id="41132">Featured Music</string>
+  <string id="41133">Featured Songs</string>
+  
+   <!-- New labels Misc.  Cirrus Extended v2 *** NEW V2.03 -->
+  <string id="41134">Einstellungen</string>
+  <string id="41135">Random Fanart Backdrops</string>
+  <string id="41136">Verstecke Video Fenster Rahmen</string>
+  <string id="41137">Aktiviere IMDB Bewertung als Zahl in FanartView</string>
+  <string id="41138">Artist fanart on home while playing music</string>
+  <string id="41139">Weather Condition fanart on home</string>
+  <string id="41140">Weather fanart location:</string>
+  <string id="41141">Enable Extended Now Playing (Overrides Clean Home Now Playing)</string>
+  <string id="41142">Disable Extended Now Playing Progress Bar</string>
+  
+   <!-- New labels Misc.  Cirrus Extended v2 *** NEW V2.04 -->
+  <string id="41143">Enable New MPAA Rating Flags</string>
+  <string id="41144">Disable CDArt Spinning in Extended Now Playing</string>
+  <string id="41145">Disable Animated Weather Icons</string>
+  <string id="41146">Hide Background Weather Widget on Home</string>
+  <string id="41147">Hide MPAA and Studio Flags in Fanart View Movies</string>
+  <string id="41148">Trailer</string>
+  <string id="41149">Show IMDB Rating Number in Video Info Screen</string>
+  <string id="41160">Disable Autoscroll in Extended Now Playing</string>
+  <string id="41161">Advanced Launcher Plugin</string>
+  <string id="41162">Miscellaneous</string>
+  <string id="41163">Style</string>
+  <string id="41164">Remove Cover Playing Media</string>
+  <string id="41165">Default CDArt Black XBMC</string>
+  <string id="41166">Default CDArt Black Cirrus Extended</string>
+  <string id="41167">Default CDArt White Cirrus Extended</string>
+  <string id="41168">Random Default CDArts</string>
+  <string id="41169">Hide Breadcrumb Trails</string>
+  <string id="41170">Set Focus Offset of Main Menu (Range -2 to xx)</string>
+  <string id="41171">Enable Custom Focus Offset of Main Menu on Startup</string>
+  <string id="41172">HD Movies</string>
+  <string id="41173">Hide Breadcrumb Trails TV Shows on Episode Level</string>
+  <string id="41174">Use Original Watched Overlay in Fanart View</string>
+  <string id="41175">Option to make use of Artist Clear Logos</string>
+  <string id="41176">Music Path</string>
+  <string id="31185">Listed Shows</string>
+  <string id="31186">Airing Today</string>
+  <string id="31187">TV Guide</string>
+
+  
+   <!-- New labels PVR.  Cirrus Extended v2 -->
+  <string id="41150">Aufnahme</string>
+  <string id="41151">Aufnahme Läuft</string>
+  <string id="41152">Kanal Liste</string>
+  <string id="41153">Teletext</string>
+  
+  
+  <!-- Script labels -->
+  <string id="31200">Verknüpfungen</string>
+  <string id="31201">Kategorien</string>
+  <string id="31202">Zeige Schauspieler</string>
+  <string id="31203">Wähle Song</string>
+  <string id="31204">Section Links</string>
+  <string id="31205">Lyrics Source</string>
+
+  <!-- The Weather Channel Script labels -->
+  <string id="31250">Radar &amp; Vorhersage</string>
+  <string id="31251">Vorhersage</string>
+  <string id="31252">TWC Script</string>
+
+  <!-- Extra labels -->
+  <string id="31300">Aktuelle Temperatur</string>
+  <string id="31301">Letztes Update</string>
+  <string id="31302">Menü</string>
+  <string id="31303"></string>
+  <string id="31304">Bild</string>
+  <string id="31305">Keine Disk gefunden</string>
+  <string id="31306">Auswerfen</string>
+  <string id="31307">Verstecke Fanart</string>
+  <string id="31308">Film-Details</string>
+  <string id="31309">RAM benötigt:</string>
+  <string id="31310">Track-Nummer</string>
+  <string id="31311">Fanart[CR][CR]nicht verfügbar[CR][CR] Zum wählen Button klicken</string>
+  <string id="31312">Aktueller Scraper</string>
+  <string id="31313">Scraper wählen</string>
+  <string id="31314">Optionen zum Scannen des Inhaltes</string>
+  <string id="31315">Basic</string>
+  <string id="31316"></string>
+  <string id="31317">Wähle Fanart-Pfad</string>
+  <string id="31318">Kleines Fanart</string>
+  <string id="31319">Ausgewähltes Profil</string>
+  <string id="31320">Letzter Login</string>
+  <string id="31321">Karaoke Song Selector</string>
+  <string id="31322">Erstausstrahlung</string>
+  <string id="31323">Neueste Filme</string>
+  <string id="31324">Neueste Episoden</string>
+  <string id="31325">Playlist-Optionen</string>
+  <string id="31326">Erstellt</string>
+  <string id="31327">Auflösung</string>
+  <string id="31328">Kürzlich hinzugefügt</string>
+  <string id="31329">[B]Timer gesetzt![/B] [COLOR=grey2] - System fährt herunter in[/COLOR]</string>
+  <string id="31330">Klicke Button für Wiedergabe[CR][CR]Film-Trailer</string>
+  <string id="31331">Suche</string>
+
+  <!-- Video and Music OSD Labels  -->
+  <string id="31351">Pause</string>
+  <string id="31352">Stop</string>
+  <string id="31353">Vorspulen</string>
+  <string id="31354">Zurückspulen</string>
+  <string id="31355">Film-Menü</string>
+  <string id="31356">Downloade Untertitel</string>
+  <string id="31357"></string>
+  <string id="31358">Jetzige Zeit</string>
+
+  <!-- Description Labels  -->
+  <string id="31400">[B][B]KONFIGURIERE DARSTELLUNG[/B][CR][CR]Ändere den Skin · Wähle Sprache und Region · Ändere die Dateianzeige[CR]Wähle deinen Blidschirmschoner</string>
+  <string id="31401">[B]KONFIGURIERE VIDEO-EINSTELLUNGEN[/B][CR][CR]Manage deine Video-Datenbank · Wähle Video-Wiedergabe Optionen · Ändere die Video-Darstellung[CR]Wähle die Untertitel-Schrift</string>
+  <string id="31402">[B]KONFIGURIERE MUSIK-EINSTELLUNGEN[/B][CR][CR]Manage deine Musik-Datenbank · Wähle Musik-Wiedergabe Optionen · Ändere die Musik-Darstellung[CR]Konfiguriere die Song Submission · Wähle Karaoke Optionen</string>
+  <string id="31403">[B]KONFIGURIERE BILDER-EINSTELLUNGEN[/B][CR][CR]Ändere die Bilder-Darstellung · Konfiguriere Slideshows</string>
+  <string id="31404">[B]KONFIGURIERE WETTER-EINSTELLUNGEN[/B][CR][CR]Wähle drei Städte für die Wetterdaten</string>
+  <string id="31405">[B]KONFIGURIERE NETZWERK-EINSTELLUNGEN[/B][CR][CR]Konfiguriere Remote via UPnp und HTTP · Konfiguriere Netzwerkfreigaben[CR]Internetzugang konfigurieren</string>
+  <string id="31406">[B]KONFIGURIERE SYSTEM-EINSTELLUNGEN[/B][CR][CR]Kalibirere deinen Display · Setze deine Sound-Einstellungen · Fernbedienung konfigurieren[CR]Energieoptionen · Aktiviere Debugging · Benutzerrechte setzen</string>
+  <string id="31407">[B]KONFIGURIERE SKIN-EINSTELLUNGEN[/B][CR][CR]Konfiguriere Cirrus · Hinzufügen und Entfernen von Hauptmenü-Items[CR]Erstelle Verknüpfungen zu Medienquellen und Addons</string>
+  <string id="31409">[B]KONFIGURIERE TV-EINSTELLUNGEN[/B][CR][CR]Ändere die Vollbild-Anzeige · Manage dein EPG</string>
+  
+  <string id="31421">Wähle dein XBMC User-Profil[CR]zum einloggen und fahre fort</string>
+  <!-- Extra Unified PVR labels -->
+  <string id="31500">Aufnahme-Timer</string>
+  <string id="31501">Geplante Zeit</string>
+  <string id="31502">Live TV</string>
+  <string id="31503">Gruppe hinzufügen</string>
+  <string id="31504">Gruppe umbennenen</string>
+  <string id="31505">Gruppe löschen</string>
+  <string id="31506">Verfügbare[CR]Gruppen</string>
+  <string id="31507">Ungruppierte[CR]Kanäle</string>
+  <string id="31508">Kanäle in Gruppen</string>
+  <string id="31509">Kanalgruppe</string>
+  <string id="31510">Timer gesetzt</string>
+  
+</strings>

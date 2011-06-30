@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.cirrus extended v2" version="2.04" name="cirrus extended v2" provider-name="Butchabay and Malexx">
+	<requires>
+		<import addon="xbmc.gui" version="2.11"/>
+			<import addon="script.recentlyadded" version="1.0.8"/>
+			<import addon="script.tv.show.next.aired" version="2.0.1"/>
+			<import addon="script.logo-downloader" version="2.1.3"/>
+	</requires>
+	<extension  point="xbmc.gui.skin" defaultresolution="720p"  defaultresolutionwide="720p" defaultthemename="Textures.xbt"  effectslowdown="1.00" debugging="false"/>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<minversion app="xbmc">33035</minversion>
+		<summary>Skin Created by Crookas - Modded by Butchabay and Malexx</summary>
+		<description>Mod based on Cirrus - Goal is to keep the Original Look and Functions and extend them to use all the Fun Stuff XBMC has to offer</description>
+	</extension>
+</addon>

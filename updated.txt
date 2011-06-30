@@ -1,0 +1,9 @@
+V 1.2.7
+
+Done : PVR Support Released
+Added: Germany Ratings Visible Condition (Thanx to Mad-Max)
+Fixed: Wraplist to Fixedlist in Addon Views
+Added: smb3M's Home search buttons in Submenus
+
+
+

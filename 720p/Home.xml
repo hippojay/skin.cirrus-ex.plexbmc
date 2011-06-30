@@ -1,0 +1,739 @@
+<window id="0">
+<defaultcontrol always="true">8999</defaultcontrol>
+<allowoverlay>no</allowoverlay>  
+<controls>
+<!-- Changes Begin Butchabay MOD 1.2.0 -->
+	<!-- NORMAL BACKDROPS -->
+    <control type="multiimage">
+		<visible>!Skin.HasSetting(homepageRandomFanart)</visible>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
+		<timeperimage>8000</timeperimage>
+		<randomize>true</randomize>
+		<fadetime>500</fadetime>
+		<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+        <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+        <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+		
+    </control>
+	<!-- RANDOM FANART BACKDROPS -->
+    <control type="multiimage">
+		<visible>Skin.HasSetting(homepageRandomFanart)</visible>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath background="true">special://profile/Thumbnails/Video/Fanart</imagepath>
+		<timeperimage>8000</timeperimage>
+		<randomize>true</randomize>
+		<fadetime>500</fadetime>
+		<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+        <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+        <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+    </control>
+	
+	<!-- Recently Added FANART BACKDROPS -->
+	<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<include>switch_horizontal_fanart</include>
+			<timeperimage>7000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>400</fadetime>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="special://skin/media/backgrounds/movies.jpg">$INFO[Container(8000).ListItem.Property(Fanart)]</texture>
+			<fadetime>600</fadetime>
+			<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>Control.HasFocus(8000)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="special://skin/media/backgrounds/tvshows.jpg">$INFO[Container(8001).ListItem.Property(Fanart)]</texture>
+			<fadetime>600</fadetime>
+			<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>Control.HasFocus(8001)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="special://skin/media/backgrounds/music.jpg">$INFO[Container(8002).ListItem.Property(Fanart)]</texture>
+			<fadetime>600</fadetime>
+			<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>Control.HasFocus(8002)</visible>
+		</control>
+		<!--el_Paraguayo mod - start -->
+		<control type="image"><!-- artist fanart on homescreen -->
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<visible>Player.HasAudio + !IsEmpty(MusicPlayer.Property(Fanart_Image)) + Skin.HasSetting(HomeMusicFanart)</visible>
+            			<fadetime>600</fadetime>
+			<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<include>Animation_CommonFadeNoHide</include>
+
+		</control>
+        
+        	<control type="multiimage"><!-- weather fanart - weather plus -->
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<timeperimage>30000</timeperimage>
+            <imagepath>$INFO[Skin.String(HomeWeatherFanartFolder)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+			<randomize>true</randomize>
+   			<fadetime>600</fadetime>
+			<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>Container(9000).HasFocus(24) + Weather.IsFetched + StringCompare(Weather.Plugin,weather.weatherplus) + Skin.HasSetting(HomeWeatherFanart) + ![Player.HasAudio + !IsEmpty(MusicPlayer.Property(Fanart_Image)) + Skin.HasSetting(HomeMusicFanart)]</visible>
+		</control>
+        
+        <control type="multiimage"><!-- weather fanart - not weather plus -->
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<timeperimage>30000</timeperimage>
+            <imagepath>$INFO[Skin.String(HomeWeatherFanartFolder)]$INFO[Weather.FanartCode]</imagepath>
+			<randomize>true</randomize>
+   			<fadetime>600</fadetime>
+			<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>Container(9000).HasFocus(24) + Weather.IsFetched + !StringCompare(Weather.Plugin,weather.weatherplus) + Skin.HasSetting(HomeWeatherFanart)  + ![Player.HasAudio + !IsEmpty(MusicPlayer.Property(Fanart_Image)) + Skin.HasSetting(HomeMusicFanart)]</visible>
+		</control>
+        
+        
+        <control type="group"> <!-- Now playing - Low Horizontal Menu el_Paraguayo -->
+            <posx>0</posx>
+            <posy>350</posy>
+            <include>ExtendedNowPlaying</include>
+            <visible>Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(horzLowHomeMenu) + Skin.HasSetting(ExtendedNowPlaying) + !Skin.HasSetting(homepageNowplayingInfo)</visible>
+        </control>
+        
+        <control type="group"> <!-- Now playing - Mid Horizontal Menu el_Paraguayo -->
+            <posx>0</posx>
+            <posy>520</posy>
+            <include>ExtendedNowPlaying</include>
+            <visible>Skin.HasSetting(horzHomeMenu) + !Skin.HasSetting(horzLowHomeMenu)  + Skin.HasSetting(ExtendedNowPlaying) + !Skin.HasSetting(homepageNowplayingInfo)</visible>
+        </control>
+        <!--el_Paraguayo mod - end -->
+  <!-- Changes Ending Butchabay MOD 1.2.0 -->
+  <!-- Changes Malexx MOD 1.2.0 -->
+    <include>CommonMediaPlayingBackground</include>
+    <include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
+    <include condition="!Skin.HasSetting(horzHomeMenu)">HomeNowPlaying</include>
+    <include condition="Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(horzLowHomeMenu)">HomeNowPlayingHorz</include>
+	<include condition="Skin.HasSetting(horzHomeMenu) + !Skin.HasSetting(horzLowHomeMenu)">IncludesHomeNowPlayingHorz-middle</include>
+	<!-- <include condition="Player.HasVideo">GlobalVideoWindow</include> -->
+
+    <control type="group">
+  
+    <!-- SUBMENUS -->
+    <include condition="!Skin.HasSetting(horzHomeMenu)">HomeSubmenu</include>
+    <include condition="Skin.HasSetting(horzHomeMenu) + !Skin.HasSetting(horzLowHomeMenu)">HomeHorzSubmenu</include>
+    <include condition="Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(horzLowHomeMenu)">HomeHorzLowSubmenu</include>
+
+	 <!-- Custom Offset -->
+	 
+	<include condition="!Skin.HasSetting(customstartupfocus)">StartUpNoCustomfocus</include>
+    <include condition="Skin.HasSetting(customstartupfocus)">StartupCustomFocus</include>
+	
+    <!-- RECENTLY ADDED -->
+    <control type="button" id="8999">
+      <description>Run Recently added</description>
+      <posx>-20</posx>
+      <posy>-20</posy>
+      <width>1</width>
+      <height>1</height>
+      <label>-</label>
+      <font>-</font>
+	   <!-- Changes for nightly Builds-->
+      <!-- <onfocus>XBMC.RunScript(script.randomitems,limit=8&amp;unplayed=True)</onfocus>
+		<onfocus>XBMC.RunScript(script.tv.show.next.aired,silent=True)</onfocus> -->
+	  <!---------------------------------------->
+	  <onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=8&amp;totals=True&amp;albums=True&amp;unplayed=True)</onfocus>
+	  <onfocus>XBMC.RunScript(special://skin/scripts/RandomItems.py,limit=8&amp;unplayed=True)</onfocus>
+      <onfocus>SetFocus(9000)</onfocus>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+      <visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+    </control>
+    <control type="button" id="8999">
+      <description>Don't run Recently added</description>
+      <posx>-20</posx>
+      <posy>-20</posy>
+      <width>1</width>
+      <height>1</height>
+      <label>-</label>
+      <font>-</font>
+      <onfocus>SetFocus(9000)</onfocus>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+      <visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+    </control>
+	<!-- Weather Plus Widget Beginning -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>90</posy>
+			<visible>Container(9000).HasFocus(24) + Weather.IsFetched</visible>
+			<visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
+        		<include>VisibleFadeEffect</include>
+			<control type="image">
+				<description>background for weather widget</description>
+				<posx>-20</posx>
+				<posy>0</posy>
+				<width>1320</width>
+				<height>220</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texture>videoinfoback.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>!Skin.HasSetting(NoBackgroundWeatherWidget)</visible>
+			</control>
+			<control type="label">
+				<description>location label</description>
+				<posx>0</posx>
+				<posy>10</posy>
+				<height>28</height>
+				<width>1280</width>
+				<label>[B]$INFO[Weather.Location][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cirrus_20</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Conditions Label</description>
+				<posx>0</posx>
+				<posy>37</posy>
+				<height>30</height>
+				<width>1280</width>
+				<label>[COLOR=grey]$LOCALIZE[33020]: [/COLOR]$INFO[Weather.Conditions]   [COLOR=grey]$LOCALIZE[404]: [/COLOR]$INFO[Window(Weather).Property(Daily.1.WindSpeed)] $INFO[Window(Weather).Property(Daily.1.ShortWindDirection)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cirrus_20</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Temp Label</description>
+				<posx>0</posx>
+				<posy>67</posy>
+				<height>30</height>
+				<width>1280</width>
+				<label>[COLOR=grey]$LOCALIZE[401]: [/COLOR]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]   [COLOR=grey]$LOCALIZE[419]: [/COLOR]$INFO[Window(Weather).Property(Daily.1.HighTemperature)]$INFO[System.TemperatureUnits]   [COLOR=grey]$LOCALIZE[418]: [/COLOR]$INFO[Window(Weather).Property(Daily.1.LowTemperature)]$INFO[System.TemperatureUnits]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cirrus_20</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Day label</description>
+				<posx>400</posx>
+				<posy>122</posy>
+				<width>85</width>
+				<height>20</height>
+           			<font>cirrus_20</font>
+          			<textcolor>orange</textcolor>
+          			<shadowcolor>black</shadowcolor>
+				<label>[B]$INFO[Window(Weather).Property(Daily.1.ShortDay)][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<description>Day label</description>
+				<posx>520</posx>
+				<posy>122</posy>
+				<width>60</width>
+				<height>20</height>
+           			<font>cirrus_20</font>
+          			<textcolor>c0FFFFFF</textcolor>
+          			<shadowcolor>black</shadowcolor>
+				<label>[B]$INFO[Window(Weather).Property(Daily.2.ShortDay)][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<description>Day label</description>
+				<posx>580</posx>
+				<posy>122</posy>
+				<width>60</width>
+				<height>20</height>
+           			<font>cirrus_20</font>
+          			<textcolor>c0FFFFFF</textcolor>
+          			<shadowcolor>black</shadowcolor>
+				<label>[B]$INFO[Window(Weather).Property(Daily.3.ShortDay)][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<description>Day label</description>
+				<posx>640</posx>
+				<posy>122</posy>
+				<width>60</width>
+				<height>20</height>
+           			<font>cirrus_20</font>
+          			<textcolor>c0FFFFFF</textcolor>
+					<shadowcolor>black</shadowcolor>
+				<label>[B]$INFO[Window(Weather).Property(Daily.4.ShortDay)][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<description>Day label</description>
+				<posx>700</posx>
+				<posy>122</posy>
+				<width>60</width>
+				<height>20</height>
+           			<font>cirrus_20</font>
+          			<textcolor>c0FFFFFF</textcolor>
+          			<shadowcolor>black</shadowcolor>
+				<label>[B]$INFO[Window(Weather).Property(Daily.5.ShortDay)][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<description>Day label</description>
+				<posx>760</posx>
+				<posy>122</posy>
+				<width>60</width>
+				<height>20</height>
+           			<font>cirrus_20</font>
+          			<textcolor>c0FFFFFF</textcolor>
+          			<shadowcolor>black</shadowcolor>
+				<label>[B]$INFO[Window(Weather).Property(Daily.6.ShortDay)][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<description>Day label</description>
+				<posx>820</posx>
+				<posy>122</posy>
+				<width>60</width>
+				<height>20</height>
+           			<font>cirrus_20</font>
+          			<textcolor>c0FFFFFF</textcolor>
+          			<shadowcolor>black</shadowcolor>
+				<label>[B]$INFO[Window(Weather).Property(Daily.7.ShortDay)][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+		</control>
+		<control type="group">
+			<posx>0</posx>
+			<posy>110</posy>
+			<visible>Container(9000).HasFocus(24) + Weather.IsFetched</visible>
+			<visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
+   		        <include>VisibleFadeEffect</include>
+		<control type="multiimage">
+		<visible>!Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>420</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<imagepath>special://skin/images/weather/$INFO[Window(Weather).Property(Daily.1.FanartCode)]</imagepath>
+			<timeperimage>100</timeperimage>
+			<randomize>false</randomize>
+			<fadetime>0</fadetime>
+		</control>
+		<control type="image">
+		<visible>Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>420</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<texture>$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
+		</control>
+		<control type="multiimage">
+		<visible>!Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>530</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<imagepath>special://skin/images/weather/$INFO[Window(Weather).Property(Daily.2.FanartCode)]</imagepath>
+			<timeperimage>100</timeperimage>
+			<randomize>false</randomize>
+			<fadetime>0</fadetime>
+		</control>
+		<control type="image">
+		<visible>Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>530</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<texture>$INFO[Window(Weather).Property(Daily.2.OutlookIcon)]</texture>
+		</control>
+		<control type="multiimage">
+		<visible>!Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>590</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<imagepath>special://skin/images/weather/$INFO[Window(Weather).Property(Daily.3.FanartCode)]</imagepath>
+			<timeperimage>100</timeperimage>
+			<randomize>false</randomize>
+			<fadetime>0</fadetime>
+		</control>
+		<control type="image">
+		<visible>Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>590</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<texture>$INFO[Window(Weather).Property(Daily.3.OutlookIcon)]</texture>
+		</control>
+		<control type="multiimage">
+		<visible>!Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>650</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<imagepath>special://skin/images/weather/$INFO[Window(Weather).Property(Daily.4.FanartCode)]</imagepath>
+			<timeperimage>100</timeperimage>
+			<randomize>false</randomize>
+			<fadetime>0</fadetime>
+		</control>
+		<control type="image">
+		<visible>Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>650</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<texture>$INFO[Window(Weather).Property(Daily.4.OutlookIcon)]</texture>
+		</control>
+		<control type="multiimage">
+		<visible>!Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>710</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<imagepath>special://skin/images/weather/$INFO[Window(Weather).Property(Daily.5.FanartCode)]</imagepath>
+			<timeperimage>100</timeperimage>
+			<randomize>false</randomize>
+			<fadetime>0</fadetime>
+		</control>
+		<control type="image">
+		<visible>Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>710</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<texture>$INFO[Window(Weather).Property(Daily.5.OutlookIcon)]</texture>
+		</control>
+		<control type="multiimage">
+		<visible>!Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>770</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<imagepath>special://skin/images/weather/$INFO[Window(Weather).Property(Daily.6.FanartCode)]</imagepath>
+			<timeperimage>100</timeperimage>
+			<randomize>false</randomize>
+			<fadetime>0</fadetime>
+		</control>
+		<control type="image">
+		<visible>Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>770</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<texture>$INFO[Window(Weather).Property(Daily.6.OutlookIcon)]</texture>
+		</control>
+		<control type="multiimage">
+		<visible>!Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>830</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<imagepath>special://skin/images/weather/$INFO[Window(Weather).Property(Daily.7.FanartCode)]</imagepath>
+			<timeperimage>100</timeperimage>
+			<randomize>false</randomize>
+			<fadetime>0</fadetime>
+		</control>
+		<control type="image">
+		<visible>Skin.HasSetting(NoAnimatedWeatherIcons)</visible>
+			<description>Weather image</description>
+			<posx>830</posx>
+			<posy>135</posy>
+			<width>40</width>
+			<height>40</height>
+			<texture>$INFO[Window(Weather).Property(Daily.7.OutlookIcon)]</texture>
+		</control>
+	</control>
+  <!-- Weather Plus Widget Ending -->
+
+
+    <!-- MAIN MENUS -->
+    <include condition="!Skin.HasSetting(horzHomeMenu)">HomeMainMenu</include>
+    <include condition="Skin.HasSetting(horzHomeMenu)">HomeMainMenuHorz</include>
+<!-- Changes Begin Butchabay MOD 1.2.0 -->
+	  <control type="image">
+	  <posx>0</posx>
+	  <posy>25r</posy>
+	  <width>1280</width>
+	  <height>700</height>
+	  <texture>rightlistbackground.png</texture>
+	  <aspectratio>stretch</aspectratio>
+	  <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+	</control>
+	 <control type="image">
+	  <posx>0</posx>
+	  <posy>-20</posy>
+	  <width>1280</width>
+	  <height>80</height>
+	  <texture>horzmenuback.png</texture>
+	  <visible>!Skin.HasSetting(cleanHome) | !Skin.HasSetting(homeNoClock)</visible>
+	</control>
+	<!-- Changes End Butchabay MOD 1.2.0 -->
+    <control type="image">
+      <description>LOGO</description>
+      <posx>10</posx>
+      <posy>10</posy>
+      <width>160</width>
+      <height>40</height>
+      <texture>xbmc_logo_white.png</texture>
+      <visible>!Skin.HasSetting(cleanHome)</visible>
+    </control>
+    <control type="image">
+      <description>LOGO Mirror</description>
+      <posx>10</posx>
+      <posy>50</posy>
+      <width>160</width>
+      <height>40</height>
+       <texture>xbmc_logo_white_reflection.png</texture>
+      <visible>!Skin.HasSetting(cleanHome)</visible>
+    </control>
+
+    <!-- BUTTONS BOTTOM LEFT (not visible if cleanHome selected -->
+    <control type="group" id="10">
+      <posx>1140</posx>
+      <posy>10</posy>
+      <control type="button" id="20">
+        <description>Power push button</description>
+        <posx>90</posx>
+        <posy>0</posy>
+        <width>43</width>
+        <height>43</height>
+        <label>-</label>
+        <font>-</font>
+        <aligny>-</aligny>
+        <onclick>ActivateWindow(ShutdownMenu)</onclick>
+        <texturefocus>homepowerbuttonFO.png</texturefocus>
+        <texturenofocus>homepowerbuttonNF.png</texturenofocus>
+        <onleft>21</onleft>
+        <onright>9000</onright>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
+        <visible>!Skin.HasSetting(cleanHome)</visible>
+      </control>
+      <control type="button" id="21">
+        <description>Favourites push button</description>
+        <posx>45</posx>
+        <posy>0</posy>
+        <width>43</width>
+        <height>43</height>
+        <label>-</label>
+        <font>-</font>
+        <aligny>-</aligny>
+        <onclick>ActivateWindow(Favourites)</onclick>
+        <texturefocus>homefavouritesbuttonFO.png</texturefocus>
+        <texturenofocus>homefavouritesbuttonNF.png</texturenofocus>
+        <onleft>22</onleft>
+        <onright>20</onright>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
+        <visible>!Skin.HasSetting(cleanHome)</visible>
+      </control>
+      <control type="button" id="22">
+        <description>Play Disc Media push button</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>43</width>
+        <height>43</height>
+        <label>-</label>
+        <font>-</font>
+        <aligny>-</aligny>
+        <onclick>XBMC.PlayDVD()</onclick>
+        <texturefocus>homeplaybuttonFO.png</texturefocus>
+        <texturenofocus>homeplaybuttonNF.png</texturenofocus>
+        <onleft>9000</onleft>
+        <onright>21</onright>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
+        <visible>System.HasMediaDVD</visible>
+        <visible>!Skin.HasSetting(cleanHome)</visible>
+      </control>
+      <control type="button" id="22">
+        <description>Play Disc Media push button</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>43</width>
+        <height>43</height>
+        <label>-</label>
+        <font>-</font>
+        <aligny>-</aligny>
+        <onclick>ActivateWindow(1113)</onclick>
+        <texturefocus>homeplaybuttonFO.png</texturefocus>
+        <texturenofocus>homeplaybuttonNF.png</texturenofocus>
+        <onleft>9000</onleft>
+        <onright>21</onright>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
+        <visible>!System.HasMediaDVD + !Skin.HasSetting(cleanHome)</visible>
+      </control>
+    </control>
+    </control>
+
+  <!-- RSS -->
+  <control type="group">
+    <posx>140</posx>
+    <posy>15</posy>
+    <control type="image">
+      <posx>-140</posx>
+      <posy>28r</posy>
+      <width>1280</width>
+      <height>105</height>
+      <texture>horzmenuback.png</texture>
+      <visible>Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(horzLowHomeMenu)</visible>
+    </control>
+    <control type="rss">
+      <description>RSS feed</description>
+      <posx>1280r</posx>
+      <posy>25r</posy>
+      <height>35</height>
+      <width>1280</width>
+      <font>font12</font>
+      <urlset>1</urlset>
+      <textcolor>orange</textcolor>
+      <titlecolor>orange</titlecolor>
+      <headlinecolor>white</headlinecolor>
+      <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+    </control>
+    </control>
+  <!-- Changes Begin Butchabay MOD 1.2.0 -->
+  
+  <!-- Weather, time etc  -->
+    <control type="group">
+    <visible>!Skin.HasSetting(homeNoClock)</visible>
+    <posx>0</posx>
+    <posy>20</posy>
+    <width>1280</width>
+    <align>center</align>
+    <control type="label">
+      <description>time label</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1280</width>
+      <height>28</height>
+      <align>center</align>
+      <aligny>top</aligny>
+      <font>cirrus_30</font>
+      <textcolor>white</textcolor>
+      <shadowcolor>black</shadowcolor>
+      <label>$INFO[System.Time]  [COLOR=grey]$INFO[System.Date]  [/COLOR]$INFO[Weather.Temperature]</label>
+    </control>
+	  <!-- Changes End Butchabay MOD 1.2.0 -->
+    </control>
+  <control type="group">
+		<visible>Skin.HasSetting(homeNoClock) + Skin.HasSetting(cleanhome)</visible>
+		<posx>150r</posx>
+		<posy>5</posy>
+		<width>200</width>
+		<align>right</align>
+		<control type="label">
+			<description>time label</description>
+			<posx>-10</posx>
+			<posy>0</posy>
+			<width>500</width>
+			<height>28</height>
+			<align>right</align>
+			<aligny>top</aligny>
+			<font>cirrus_40</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[System.Time]</label>
+		</control>    
+
+		<!-- weather Info -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<align>right</align>
+			<width>200</width>
+			<visible>Weather.IsFetched</visible>
+			<!-- <visible>!Skin.HasSetting(homepageWeatherinfo) + Weather.IsFetched</visible> -->
+			<control type="image">
+				<description>Weather image</description>
+				<posx>0</posx>
+				<posy>-5</posy>
+				<width>50</width>
+				<height>50</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[Weather.Conditions]</texture>
+			</control>
+			<control type="label">
+				<description>temp label</description>
+				<posx>60</posx>
+				<posy>10</posy>
+				<width>200</width>
+				<height>28</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>cirrus_40</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[Weather.Temperature]</label>
+			</control>
+			</control>
+		</control>
+  
+</controls>
+</window>

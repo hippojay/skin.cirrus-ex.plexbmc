@@ -1,0 +1,211 @@
+<window id="2600">
+	<defaultcontrol always="true">6000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath fallback="special://skin/backgrounds/weatherplus.jpg">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<timeperimage>5000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>2000</fadetime>
+			<visible>!Skin.HasSetting(Weather_Conditional_Backgrounds)</visible>
+			<visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath fallback="special://skin/backgrounds/weather.jpg">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<timeperimage>5000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>2000</fadetime>
+			<visible>!Skin.HasSetting(Weather_Conditional_Backgrounds)</visible>
+			<visible>!StringCompare(Weather.Plugin,weather.weatherplus)</visible>
+		</control>
+		<control type="group">
+			<include>ContentFade</include>
+			<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)">weather</include>
+			<include condition="StringCompare(Weather.Plugin,weather.weatherplus)">weatherplus</include>
+		</control>
+		<control type="group">
+			<posx>-300</posx>
+			<posy>0</posy>
+		<animation effect="slide" start="0,0" end="280,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-380,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus">WindowClose</animation>
+			<visible>!Skin.HasSetting(KioskMode)</visible>
+			<control type="group" id="9000">
+				<control type="image">
+					<posy>-67</posy>
+					<width>300</width>
+					<height>820</height>
+					<texture border="5">DialogBackground.png</texture>
+				</control>
+				<control type="image">
+			<posx>50</posx>
+			<posy>650</posy>
+			<width>160</width>
+			<height>40</height>
+			<texture>xbmc_logo_white.png</texture>
+		</control>
+		<control type="image">
+			<posx>220</posx>
+			<posy>650</posy>
+			<width>45</width>
+			<height>50</height>
+			<texture>twc-logo.png</texture>
+		</control>
+			<control type="label">
+					<description>View options</description>
+					<posx>260</posx>
+					<posy>-52</posy>
+					<width>250</width>
+					<height>30</height>
+					<font>cirrus_24_Bold</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[14018]</label>
+				</control>
+				<control type="spincontrolex" id="3">
+					<description>change location button</description>
+					<posx>40</posx>
+					<posy>0</posy>
+					<font>-</font>
+					<textoffsetx>5</textoffsetx>
+					<include>ButtonCommonValues</include>
+					<onleft>6000</onleft>
+					<onright>6000</onright>
+					<onup>610</onup>
+					<ondown>101</ondown>
+				</control>
+				<control type="label">
+					<description>change location label</description>
+					<posx>53</posx>
+					<posy>0</posy>
+					<height>44</height>
+					<width>270</width>
+					<font>font-20</font>
+					<label>21873</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="button" id="101">
+					<description>Current button</description>
+					<posx>40</posx>
+					<posy>45</posy>
+					<include>ButtonCommonValues</include>
+					<label>33006</label>
+					<onleft>6000</onleft>
+					<onright>6000</onright>
+					<onup>3</onup>
+					<ondown>102</ondown>
+					<onfocus>Skin.SetString(WeatherPlus,1)</onfocus>
+					<visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
+				</control>
+				<control type="button" id="102">
+					<description>Hourly button</description>
+					<posx>40</posx>
+					<posy>90</posy>
+					<include>ButtonCommonValues</include>
+					<label>33036</label>
+					<onleft>6000</onleft>
+					<onright>6000</onright>
+					<onup>101</onup>
+					<ondown>103</ondown>
+					<onfocus>Skin.SetString(WeatherPlus,2)</onfocus>
+					<visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
+				</control>
+				<control type="button" id="103">
+					<description>10 day button</description>
+					<posx>40</posx>
+					<posy>135</posy>
+					<include>ButtonCommonValues</include>
+					<label>10-Day</label>
+					<onleft>6000</onleft>
+					<onright>6000</onright>
+					<onup>102</onup>
+					<ondown>2</ondown>
+					<onfocus>Skin.SetString(WeatherPlus,3)</onfocus>
+					<visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
+				</control>
+				<control type="button" id="2">
+					<description>Refresh button</description>
+					<posx>40</posx>
+					<posy>180</posy>
+					<include>ButtonCommonValues</include>
+					<label>103</label>
+					<onleft>6000</onleft>
+					<onright>6000</onright>
+					<onup>103</onup>
+					<ondown>610</ondown>
+					<animation effect="slide" start="0,0" end="0,-135" time="0" condition="!StringCompare(Weather.Plugin,weather.weatherplus)">Conditional</animation>
+				</control>
+				<control type="button" id="610">
+					<description>PlayerControls</description>
+					<posx>40</posx>
+					<posy>225</posy>
+					<include>ButtonCommonValues</include>
+					<label>16003</label>
+					<onleft>6000</onleft>
+					<onright>6000</onright>
+					<onup>2</onup>
+					<ondown>3</ondown>
+					<onclick>ActivateWindow(playercontrols)</onclick>
+					<animation effect="slide" start="0,0" end="0,-135" time="0" condition="!StringCompare(Weather.Plugin,weather.weatherplus)">Conditional</animation>
+					<visible>Player.HasAudio | Player.HasVideo</visible>
+				</control>
+			<control type="button">
+				<description>Fake button for mouse control</description>
+				<posx>-20</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>720</height>
+				<label>-</label>
+				<font>-</font>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<visible>true</visible>
+        			</control>
+			</control>
+		</control>
+		<control type="group">
+			<include>ContentFade</include>
+			<control type="grouplist">
+				<include>Breadcrumbs</include>
+				<include>Breadcrumbs-Weather</include>
+			</control>
+			<control type="image">
+				<description>weather location panel</description>
+				<posx>390</posx>
+				<posy>2</posy>
+				<width>500</width>
+				<height>30</height>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+				<texture>videoinfoback.png</texture>
+			</control>
+			<control type="label">
+				<description>weather location label</description>
+				<posx>860</posx>
+				<posy>5</posy>
+				<width>500</width>
+				<height>20</height>
+				<font>cirrus_24_bold</font>
+				<textcolor>white</textcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[Weather.Location] | $INFO[Window.Property(Updated)]</label>
+			</control>
+			<include>clock</include>
+		</control>
+	</controls>
+</window>
