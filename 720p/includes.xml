@@ -45,6 +45,7 @@
   <include file="ViewsLiveTV.xml" />				      <!-- Added for PVR Butchabay  view700-->
   <include file="IncludesExtendedHomePlaying.xml" />	
   <include file="Includes_Next_Aired_TV_Guide.xml" />
+  <include file="IncludesPlexMainMenu.xml" />
 
   <constant name="FanartCrossfadeTime">400</constant>
   <constant name="IconCrossfadeTime">400</constant>

@@ -1,0 +1,1217 @@
+<includes>
+
+    <include name="runplexbmcplugin">
+        <onfocus>XBMC.RunScript(plugin.video.plexbmc,skin)</onfocus>
+    </include>
+        
+	<include name="PlexMainMenu">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>500</width>
+			<height>720</height>
+			<texture>blackgradient.png</texture>
+			<visible>!Skin.HasSetting(horzHomeMenu)</visible>
+		</control>
+		<control type="videowindow" id="8">
+		  <posx>705</posx>
+		  <posy>100</posy>
+		  <width>520</width>
+		  <height>250</height>
+		  <align>center</align>
+		  <visible>Skin.Hassetting(videowindowonhome)</visible>
+		  <visible>!Container(9000).HasFocus(24)</visible>
+		  </control> 
+		  <control type="videowindow" id="8">
+		  <posx>895</posx>
+		  <posy>95</posy>
+		  <width>380</width>
+		  <height>211</height>
+		  <align>center</align>
+		  <visible>Skin.Hassetting(videowindowonhome)</visible>
+		  <visible>Container(9000).HasFocus(24)</visible>
+		  </control> 
+		  <control type="group">
+				<visible>Skin.HasSetting(cdartonhome)</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				
+				<!-- CD Animation -->
+		  <control type="image">
+					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+					<animation effect="rotate" end="-360" center="auto" time="5000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+					<width>95</width>
+					<height>95</height>
+					<posx>1180</posx>
+					<posy>417</posy>
+					<texture fallback="cdartdefault.png">$INFO[Player.FolderPath]cdart.png</texture>
+					<aspectratio align="bottom">keep</aspectratio>
+					<visible>Skin.HasSetting(cdartonhome)</visible>
+					<visible>Player.HasAudio</visible>
+					<visible>!Skin.HasSetting(homepageNowplayingInfo)</visible>
+					<visible>!Skin.HasSetting(cdart2) + !Skin.HasSetting(cdart3)</visible>
+				</control>
+				 <control type="image">
+					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+					<animation effect="rotate" end="-360" center="auto" time="5000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+					<width>95</width>
+					<height>95</height>
+					<posx>1180</posx>
+					<posy>417</posy>
+					<texture fallback="cdartdefault 2b.png">$INFO[Player.FolderPath]cdart.png</texture>
+					<aspectratio align="bottom">keep</aspectratio>
+					<visible>Skin.HasSetting(cdartonhome)</visible>
+					<visible>Player.HasAudio</visible>
+					<visible>!Skin.HasSetting(homepageNowplayingInfo)</visible>
+					<visible>Skin.HasSetting(cdart2)</visible>
+				</control>
+				 <control type="image">
+					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+					<animation effect="rotate" end="-360" center="auto" time="5000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+					<width>95</width>
+					<height>95</height>
+					<posx>1180</posx>
+					<posy>417</posy>
+					<texture fallback="cdartdefault 3w.png">$INFO[Player.FolderPath]cdart.png</texture>
+					<aspectratio align="bottom">keep</aspectratio>
+					<visible>Skin.HasSetting(cdartonhome)</visible>
+					<visible>Player.HasAudio</visible>
+					<visible>!Skin.HasSetting(homepageNowplayingInfo)</visible>
+					<visible>Skin.HasSetting(cdart3)</visible>
+				</control>
+				 <control type="multiimage">
+					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+					<animation effect="rotate" end="-360" center="auto" time="5000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+					<width>95</width>
+					<height>95</height>
+					<posx>1180</posx>
+					<posy>417</posy>
+					<imagepath background="true">special://skin/extras/defaultcdarts</imagepath>
+					<aspectratio align="bottom">keep</aspectratio>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<timeperimage>210000</timeperimage>
+					<visible>Skin.HasSetting(randomdefaultcdart)</visible>
+					<visible>Skin.HasSetting(cdartonhome)</visible>
+					<visible>Player.HasAudio</visible>
+					<visible>!Skin.HasSetting(homepageNowplayingInfo)</visible>
+				</control>
+			</control>
+			<control type="group"><!-- cover image -->
+			<visible>Skin.HasSetting(cdartonhome)</visible>
+			<visible>Player.HasAudio</visible>
+			<visible>!Skin.HasSetting(homepageNowplayingInfo)</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<control type="image">
+					<posx>1130</posx>
+					<posy>415</posy>
+					<width>100</width>
+					<height>100</height>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[MusicPlayer.cover]</texture>
+				</control>
+				<control type="image">
+					<posx>1130</posx>
+					<posy>415</posy>
+					<width>100</width>
+					<height>100</height>
+					<aspectratio aligny="top">stretch</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>GlassOverlay2.png</texture>
+				</control>
+			</control>
+	<!-- Changes Begin Butchabay MOD 1.2.0 -->
+		<!-- !!! MAIN MENU !!! -->
+		<control type="wraplist" id="9000">
+			<hitrect x="50" y="50" w="330" h="620" />
+			<posx>-20</posx>
+			<posy>300</posy>
+			<width>400</width>
+			<height>720</height>
+			<!-- Changes End Butchabay MOD 1.2.0 -->
+			<onleft>10</onleft>
+			<onright>9001</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>300</scrolltime>
+			<focusposition>1</focusposition>
+			<movement>1</movement>
+			<animation effect="fade" start="0" end="100" time="20">Visible</animation>
+			<animation effect="fade" start="100" end="30" time="20" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus | Control.HasFocus(8000) | Control.HasFocus(8001)">conditional</animation>
+
+			<itemlayout height="102" width="380">
+				<control type="label">
+					<posx>40</posx>
+					<posy>21</posy>
+					<width>380</width>
+					<height>40</height>
+					<font>cirrus_50</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<animation effect="zoom" start="65" end="65" time="0" condition="true">Conditional</animation>
+					<animation effect="fade" start="100" end="30" time="0" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus">conditional</animation>
+				</control>
+			</itemlayout>
+			<focusedlayout height="102" width="380">
+				<control type="label">
+					<posx>40</posx>
+					<posy>21</posy>
+					<width>380</width>
+					<height>40</height>
+					<font>cirrus_50</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<animation effect="zoom" start="65" end="100" time="200">Focus</animation>
+					<animation effect="zoom" start="100" end="65" time="200">UnFocus</animation>
+				</control>
+				<control type="image">
+					<posx>45</posx>
+					<posy>70</posy>
+					<width>18</width>
+					<height>18</height>
+					<texture>HomeHasSub.png</texture>
+					<visible>stringcompare(Container(9000).ListItem.Property(type),movie) | stringcompare(Container(9000).ListItem.Property(type),show) | Container(9000).HasFocus(12) | Container(9000).HasFocus(14) | Container(9000).HasFocus(25) | [Container(9000).HasFocus(18) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]] | Container(9000).HasFocus(1) | Container(9000).HasFocus(7)</visible>
+					<animation effect="fade" start="0" end="100" time="200">Focus</animation>
+					<animation effect="fade" start="100" end="0" time="200">UnFocus</animation>
+				</control>
+			</focusedlayout>
+
+			<content>
+			<item id="2">
+					<description>Custom FAV One</description>
+					<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom1_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom1)</visible>
+				</item>
+			<item id="3">
+					<description>Custom Playlist 1</description>
+					<label>$INFO[Skin.String(Menu_Custom4_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom4_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom4_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom4)</visible>
+				</item>
+			<item id="4">
+					<description>Custom Playlist 2</description>
+					<label>$INFO[Skin.String(Menu_Custom5_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom5_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom5_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom5)</visible>
+				</item>
+			<item id="5">
+					<description>Custom Playlist 3</description>
+					<label>$INFO[Skin.String(Menu_Custom6_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom6_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom6_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom6)</visible>
+				</item>
+			<item id="8">
+					<description>Custom FAV Two</description>
+					<label>$INFO[Skin.String(Menu_Custom2_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom2_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom2_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom2)</visible>
+				</item>	
+			<item id="9">
+					<description>Custom Playlist 4</description>
+					<label>$INFO[Skin.String(Menu_Custom9_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom9_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom9_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom9)</visible>
+				</item>
+			<item id="10">
+					<description>Custom Playlist 5</description>
+					<label>$INFO[Skin.String(Menu_Custom10_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom10_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom10_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom10)</visible>
+				</item>
+			<item id="11">
+					<description>Custom Playlist 6</description>
+					<label>$INFO[Skin.String(Menu_Custom11_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom11_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom11_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom11)</visible>
+				</item>	
+			<item id="12">
+					<label>XBMC $LOCALIZE[3]</label>
+					<onclick>ActivateWindow(VideoFiles)</onclick>
+					<icon>special://skin/backgrounds/videos.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
+					<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
+				</item>
+			<!-- PVR Butchabay -->
+			<item id="13">
+					<label>31502</label>
+					<onclick>ActivateWindow(TV)</onclick>
+					<icon>special://skin/backgrounds/tv.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</thumb>
+					<visible>System.GetBool(pvrmanager.enabled)</visible>
+				</item>
+			<!-- PVR Butchabay End -->	
+			<item id="14">
+					<label>XBMC $LOCALIZE[2]</label>
+					<onclick>ActivateWindow(Music)</onclick>
+					<icon>special://skin/backgrounds/music.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
+					<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+				</item>
+			<item id="15">
+					<description>Custom FAV Three</description>
+					<label>$INFO[Skin.String(Menu_Custom3_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom3_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom3_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom3)</visible>
+				</item>	
+			<item id="16">
+					<description>Custom Playlist 7</description>
+					<label>$INFO[Skin.String(Menu_Custom12_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom12_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom12_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom12)</visible>
+				</item>
+			<item id="17">
+					<description>Custom Playlist 8</description>
+					<label>$INFO[Skin.String(Menu_Custom13_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom13_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom13_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom13)</visible>
+				</item>	
+			<item id="18">
+					<description>Addons</description>
+					<label>41098</label>
+					<onclick>ActivateWindow(Programs,Addons,return)</onclick>
+					<icon>special://skin/backgrounds/scripts.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Scripts_Folder)]</thumb>
+					<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
+				</item>
+			<item id="19">
+					<description>Custom FAV Four</description>
+					<label>$INFO[Skin.String(Menu_Custom7_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom7_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom7_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom7)</visible>
+				</item>
+				<item id="20">
+					<description>Custom FAV Five</description>
+					<label>$INFO[Skin.String(Menu_Custom8_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom8_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom8_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom8)</visible>
+				</item>	
+			<item id="21">
+					<label>41024</label>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<icon>special://skin/backgrounds/favourite.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Favourites_Folder)]</thumb>
+					<visible>!Skin.HasSetting(HomeMenuNoFavouritesButton)</visible>
+				</item>	
+			<item id="22">
+					<description>Games</description>
+					<label>41026</label>
+					<onclick>ActivateWindow(Programs,plugin://plugin.program.advanced.launcher)</onclick>
+					<icon>special://skin/backgrounds/games.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Games_Folder)]</thumb>
+					<visible>!Skin.HasSetting(enablegames)</visible>
+					</item>
+			<item id="23">
+					<label>1</label>
+					<onclick>ActivateWindow(Pictures)</onclick>
+					<icon>special://skin/backgrounds/pictures.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
+					<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+				</item>
+				<item id="24">
+					<label>8</label>
+					<onclick>ActivateWindow(Weather)</onclick>
+					<icon>special://skin/backgrounds/weather.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+					<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
+				</item>
+				<item id="24">
+					<label>8</label>
+					<onclick>ActivateWindow(Weather)</onclick>
+					<icon>special://skin/backgrounds/weather.jpg</icon>
+					<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+					<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
+				</item>
+				<item id="25">
+					<label>Preferences</label>
+					<onclick>ActivateWindow(Settings)</onclick>
+					<icon>special://skin/backgrounds/settings.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
+					<visible>!Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
+				</item>
+				<item id="26">
+					<label>41022</label>
+					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+					<!-- onclick>SetFocus(9001)</onclick -->
+					<icon>special://skin/backgrounds/shutdown.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</thumb>
+					<visible>!Skin.HasSetting(HomeMenuNoShutdownButton)</visible>
+				</item>
+				<item id="27">
+					<label>41100</label>
+					<label2>31010</label2>
+					<onclick>ActivateWindow(1113)</onclick>
+					<icon>special://skin/backgrounds/playdisc.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</thumb>
+					<visible>System.HasMediaDVD + !Skin.HasSetting(HomeDiscDriveButtonDiscOnly)</visible>
+					<visible>!Skin.HasSetting(HomeMenuNoDiscDriveButton)</visible>
+				</item>
+            <!-- Changes ending  -->	
+            <!-- PLEXBMC EXTRA -->
+   				<item id="28">
+                    <label>$INFO[Window.Property(plexbmc.1.title)]</label>
+                    <label2>$INFO[Window.Property(plexbmc.1.subtitle)]</label2>
+                    <onclick>$INFO[Window.Property(plexbmc.1.path)]</onclick>
+					<icon>$INFO[Window.Property(plexbmc.1.art)]</icon>
+                    <thumb>$INFO[Window.Property(plexbmc.1.thumb)]</thumb>
+                    <property name="type">$INFO[Window.Property(plexbmc.1.type)]</property>                    
+                    <property name="partial">$INFO[Window.Property(plexbmc.1.partialpath)]</property>                    
+                    <visible>Skin.HasSetting(plexbmcok)</visible>
+                    <visible>!IsEmpty(Window.Property(plexbmc.1.title))</visible>
+                </item>
+   				<item id="29">
+                    <label>$INFO[Window.Property(plexbmc.2.title)]</label>
+                    <label2>$INFO[Window.Property(plexbmc.2.subtitle)]</label2>
+                    <onclick>$INFO[Window.Property(plexbmc.2.path)]</onclick>
+					<icon>$INFO[Window.Property(plexbmc.2.art)]</icon>
+                    <thumb>$INFO[Window.Property(plexbmc.2.thumb)]</thumb>
+                    <property name="type">$INFO[Window.Property(plexbmc.2.type)]</property>                    
+                    <property name="partial">$INFO[Window.Property(plexbmc.2.partialpath)]</property>                    
+                    <visible>Skin.HasSetting(plexbmcok)</visible>
+                    <visible>!IsEmpty(Window.Property(plexbmc.2.title))</visible>
+                </item>
+   				<item id="30">
+                    <label>$INFO[Window.Property(plexbmc.3.title)]</label>
+                    <label2>$INFO[Window.Property(plexbmc.3.subtitle)]</label2>
+                    <onclick>$INFO[Window.Property(plexbmc.3.path)]</onclick>
+					<icon>$INFO[Window.Property(plexbmc.3.art)]</icon>
+                    <thumb>$INFO[Window.Property(plexbmc.3.thumb)]</thumb>
+                    <property name="type">$INFO[Window.Property(plexbmc.3.type)]</property>                    
+                    <property name="partial">$INFO[Window.Property(plexbmc.3.partialpath)]</property>                    
+                    <visible>Skin.HasSetting(plexbmcok)</visible>
+                    <visible>!IsEmpty(Window.Property(plexbmc.3.title))</visible>
+                </item>
+   				<item id="31">
+                    <label>$INFO[Window.Property(plexbmc.4.title)]</label>
+                    <label2>$INFO[Window.Property(plexbmc.4.subtitle)]</label2>
+                    <onclick>$INFO[Window.Property(plexbmc.4.path)]</onclick>
+					<icon>$INFO[Window.Property(plexbmc.4.art)]</icon>
+                    <thumb>$INFO[Window.Property(plexbmc.4.thumb)]</thumb>
+                    <property name="type">$INFO[Window.Property(plexbmc.4.type)]</property>                    
+                    <property name="partial">$INFO[Window.Property(plexbmc.4.partialpath)]</property>                    
+                    <visible>Skin.HasSetting(plexbmcok)</visible>
+                    <visible>!IsEmpty(Window.Property(plexbmc.4.title))</visible>
+                </item>
+   				<item id="32">
+                    <label>$INFO[Window.Property(plexbmc.5.title)]</label>
+                    <label2>$INFO[Window.Property(plexbmc.5.subtitle)]</label2>
+                    <onclick>$INFO[Window.Property(plexbmc.5.path)]</onclick>
+					<icon>$INFO[Window.Property(plexbmc.5.art)]</icon>
+                    <thumb>$INFO[Window.Property(plexbmc.5.thumb)]</thumb>
+                    <property name="type">$INFO[Window.Property(plexbmc.5.type)]</property>                    
+                    <property name="partial">$INFO[Window.Property(plexbmc.5.partialpath)]</property>                    
+                    <visible>Skin.HasSetting(plexbmcok)</visible>
+                    <visible>!IsEmpty(Window.Property(plexbmc.5.title))</visible>
+                </item>
+   				<item id="33">
+                    <label>$INFO[Window.Property(plexbmc.6.title)]</label>
+                    <label2>$INFO[Window.Property(plexbmc.6.subtitle)]</label2>
+                    <onclick>$INFO[Window.Property(plexbmc.6.path)]</onclick>
+					<icon>$INFO[Window.Property(plexbmc.6.art)]</icon>
+                    <thumb>$INFO[Window.Property(plexbmc.6.thumb)]</thumb>
+                    <property name="type">$INFO[Window.Property(plexbmc.6.type)]</property>                    
+                    <property name="partial">$INFO[Window.Property(plexbmc.6.partialpath)]</property>                    
+                    <visible>Skin.HasSetting(plexbmcok)</visible>
+                    <visible>!IsEmpty(Window.Property(plexbmc.6.title))</visible>
+                </item>
+   				<item id="34">
+                    <label>$INFO[Window.Property(plexbmc.7.title)]</label>
+                    <label2>$INFO[Window.Property(plexbmc.7.subtitle)]</label2>
+                    <onclick>$INFO[Window.Property(plexbmc.7.path)]</onclick>
+					<icon>$INFO[Window.Property(plexbmc.7.art)]</icon>
+                    <thumb>$INFO[Window.Property(plexbmc.7.thumb)]</thumb>
+                    <property name="type">$INFO[Window.Property(plexbmc.7.type)]</property>                    
+                    <property name="partial">$INFO[Window.Property(plexbmc.7.partialpath)]</property>                    
+                    <visible>Skin.HasSetting(plexbmcok)</visible>
+                    <visible>!IsEmpty(Window.Property(plexbmc.7.title))</visible>
+                </item>
+   				<item id="35">
+                    <label>$INFO[Window.Property(plexbmc.8.title)]</label>
+                    <label2>$INFO[Window.Property(plexbmc.8.subtitle)]</label2>
+                    <onclick>$INFO[Window.Property(plexbmc.8.path)]</onclick>
+					<icon>$INFO[Window.Property(plexbmc.8.art)]</icon>
+                    <thumb>$INFO[Window.Property(plexbmc.8.thumb)]</thumb>
+                    <property name="type">$INFO[Window.Property(plexbmc.8.type)]</property>                    
+                    <property name="partial">$INFO[Window.Property(plexbmc.8.partialpath)]</property>                    
+                    <visible>Skin.HasSetting(plexbmcok)</visible>
+                    <visible>!IsEmpty(Window.Property(plexbmc.8.title))</visible>
+                </item>
+   				<item id="36">
+                    <label>$INFO[Window.Property(plexbmc.9.title)]</label>
+                    <label2>$INFO[Window.Property(plexbmc.9.subtitle)]</label2>
+                    <onclick>$INFO[Window.Property(plexbmc.9.path)]</onclick>
+					<icon>$INFO[Window.Property(plexbmc.9.art)]</icon>
+                    <thumb>$INFO[Window.Property(plexbmc.9.thumb)]</thumb>
+                    <property name="type">$INFO[Window.Property(plexbmc.9.type)]</property>                    
+                    <property name="partial">$INFO[Window.Property(plexbmc.9.partialpath)]</property>                    
+                    <visible>Skin.HasSetting(plexbmcok)</visible>
+                    <visible>!IsEmpty(Window.Property(plexbmc.9.title))</visible>
+                </item>
+   				<item id="37">
+                    <label>$INFO[Window.Property(plexbmc.10.title)]</label>
+                    <label2>$INFO[Window.Property(plexbmc.10.subtitle)]</label2>
+                    <onclick>$INFO[Window.Property(plexbmc.10.path)]</onclick>
+					<icon>$INFO[Window.Property(plexbmc.10.art)]</icon>
+                    <thumb>$INFO[Window.Property(plexbmc.10.thumb)]</thumb>
+                    <property name="type">$INFO[Window.Property(plexbmc.10.type)]</property>                    
+                    <property name="partial">$INFO[Window.Property(plexbmc.10.partialpath)]</property>                    
+                    <visible>Skin.HasSetting(plexbmcok)</visible>
+                    <visible>!IsEmpty(Window.Property(plexbmc.10.title))</visible>
+                </item>
+   				<item id="38">
+                    <label>$INFO[Window.Property(plexbmc.11.title)]</label>
+                    <label2>$INFO[Window.Property(plexbmc.11.subtitle)]</label2>
+                    <onclick>$INFO[Window.Property(plexbmc.11.path)]</onclick>
+					<icon>$INFO[Window.Property(plexbmc.11.art)]</icon>
+                    <thumb>$INFO[Window.Property(plexbmc.11.thumb)]</thumb>
+                    <property name="type">$INFO[Window.Property(plexbmc.11.type)]</property>                    
+                    <property name="partial">$INFO[Window.Property(plexbmc.11.partialpath)]</property>                    
+                    <visible>Skin.HasSetting(plexbmcok)</visible>
+                    <visible>!IsEmpty(Window.Property(plexbmc.11.title))</visible>
+                </item>
+			</content>
+		</control>
+
+	</include>
+    
+	<include name="PlexSubMenu">
+
+		<!-- HOME MENU SUBMENUS NORMAL -->
+		<control type="group" id="9001">
+			<posx>50</posx>
+			<posy>241</posy>
+			
+			<control type="image">  <!-- background bar for normal submenus -->
+						<posx>10</posx>
+						<posy>25</posy>
+						<width>278</width>
+						<height>634</height>
+						<colordiffuse>DDFFFFFF</colordiffuse>
+						<texture border="20">DialogBackground.png</texture>
+					</control>
+			
+			
+			<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
+			<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
+			<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
+			<animation effect="slide" end="210,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">conditional</animation>
+			<animation effect="slide" end="0,-204" time="300" condition="Container(9000).Row(1)">conditional</animation>
+			<animation effect="slide" end="0,-102" time="300" condition="Container(9000).Row(2)">conditional</animation>
+			<animation effect="slide" end="0,102" time="300" condition="Container(9000).Row(4)">conditional</animation>
+			<animation effect="slide" end="0,204" time="300" condition="Container(9000).Row(5)">conditional</animation>
+
+			<!-- PLEX MOVIES and TV SHOW SUBMENU -->
+			<control type="grouplist" id="9010">
+				<posx>10</posx>
+				<posy>30</posy>
+				<width>240</width>
+				<height>240</height>
+				<align>center</align>
+				<onleft>9000</onleft>
+				<onright>Control.SetFocus(8000,0)</onright>
+				<onup>9010</onup>
+				<ondown>9010</ondown>
+				<itemgap>0</itemgap>
+				<visible>stringcompare(Container(9000).ListItem.Property(type),movie) | stringcompare(Container(9000).ListItem.Property(type),show)</visible>
+                <control type="button" id="90100">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>All $INFO[Container(9000).ListItem.label]</label>
+					<onclick>$INFO[Container(9000).ListItem.Property(partial)]/all&mode=0,return)</onclick>
+				</control>
+				<control type="button" id="90101">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>Unwatched</label>
+					<onclick>$INFO[Container(9000).ListItem.Property(partial)]/unwatched&mode=0,return)</onclick>
+				</control>
+				<control type="button" id="90102">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>Recently Released</label>
+					<onclick>$INFO[Container(9000).ListItem.Property(partial)]/newest&mode=0,return)</onclick>
+				</control>
+				<control type="button" id="90103">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>Recently Added</label>
+					<onclick>$INFO[Container(9000).ListItem.Property(partial)]/recentlyAdded&mode=0,return)</onclick>
+				</control>
+				<control type="button" id="90104">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>Recently Viewed</label>
+					<onclick>$INFO[Container(9000).ListItem.Property(partial)]/recentlyViewed&mode=0,return)</onclick>
+				</control>
+			</control>
+
+            <!-- XBMC VIDEOS SUBMENU -->
+			<control type="grouplist" id="9010">
+				<posx>10</posx>
+				<posy>30</posy>
+				<width>240</width>
+				<height>240</height>
+				<align>center</align>
+				<onleft>9000</onleft>
+				<onright>Control.SetFocus(8000,0)</onright>
+				<onup>9010</onup>
+				<ondown>9010</ondown>
+				<itemgap>0</itemgap>
+				<visible>Container(9000).HasFocus(12)</visible>
+				<!-- SearchSUBMENU Butchabay -->
+                <control type="button" id="90100">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>31331</label>
+					<onclick>ActivateWindow(VideoLibrary)</onclick>
+					<onclick>SendClick(8)</onclick>
+				</control>
+				<control type="button" id="90101">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>342</label>
+					<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+					<visible>Library.HasContent(Movies)</visible>
+				</control>
+				<control type="button" id="90102">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>20343</label>
+					<onclick>ActivateWindow(VideoLibrary,TvShowTitles,return)</onclick>
+					<visible>Library.HasContent(TVShows)</visible>
+				</control>
+				<control type="button" id="90103">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>20389</label>
+					<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,return)</onclick>
+					<visible>Library.HasContent(MusicVideos)</visible>
+				</control>
+				<control type="button" id="90104">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>744</label>
+					<onclick>ActivateWindow(VideoFiles)</onclick>
+				</control>
+				<control type="button" id="90105">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>14022</label>
+					<onclick>ActivateWindow(VideoLibrary)</onclick>
+					<visible>Library.HasContent(Videos)</visible>
+				</control>
+				<control type="button" id="90106"> <!-- Addon Mod -->
+					<include>ButtonHomeSubCommonValues</include>
+					<label>31007</label>
+					<onclick>ActivateWindow(VideoLibrary,Plugins)</onclick>
+					<visible>Library.HasContent(Video)</visible>
+				</control>
+				<control type="button" id="90107">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>31007</label>
+					<onclick>ActivateWindow(VideoFiles,$LOCALIZE[1037])</onclick>
+					<visible>!Library.HasContent(Video)</visible>
+				</control>
+			</control>
+
+
+            
+			<!-- MUSIC SUBMENU -->
+			<control type="grouplist" id="9011">
+				<posx>10</posx>
+				<posy>50</posy>
+				<width>240</width>
+				<height>240</height>
+				<align>center</align>
+				<onleft>9000</onleft>
+				<onright>Control.SetFocus(8002,0)</onright>
+				<onup>9011</onup>
+				<ondown>9011</ondown>
+				<itemgap>0</itemgap>
+				<visible>Container(9000).HasFocus(14)</visible>
+		        <!-- SearchSUBMENU Butchabay -->
+                <control type="button" id="90110">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>31331</label>
+					<onclick>ActivateWindow(MusicLibrary)</onclick>
+					<onclick>SendClick(8)</onclick>
+				</control>
+				<control type="button" id="90111">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>133</label>
+					<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+					<visible>Library.HasContent(Music)</visible>
+				</control>
+				<control type="button" id="90112">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>132</label>
+					<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
+					<visible>Library.HasContent(Music)</visible>
+				</control>
+				<control type="button" id="90113">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>134</label>
+					<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
+					<visible>Library.HasContent(Music)</visible>
+				</control>
+				<control type="button" id="90114">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>744</label>
+					<onclick>ActivateWindow(MusicFiles)</onclick>
+				</control>
+				<control type="button" id="90115">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>14022</label>
+					<onclick>ActivateWindow(MusicLibrary)</onclick>
+					<visible>Library.HasContent(Music)</visible>
+				</control>
+				<control type="button" id="9011456">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>653</label>
+					<onclick>UpdateLibrary(Music)</onclick>
+				</control>
+				<control type="button" id="90117">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>31007</label>
+					<onclick>ActivateWindow(MusicFiles,$LOCALIZE[1038])</onclick>
+					<visible>!Library.HasContent(Music)</visible>
+				</control>
+			</control>
+
+			<!-- SETTINGS SUBMENU -->
+			<control type="grouplist" id="9014">
+				<posx>10</posx>
+				<posy>50</posy>
+				<width>240</width>
+				<height>280</height>
+				<align>center</align>
+				<onleft>9000</onleft>
+				<onright>9001</onright>
+				<onup>9014</onup>
+				<ondown>9014</ondown>
+				<itemgap>0</itemgap>
+				<visible>Container(9000).HasFocus(25)</visible>
+ 
+				<control type="button" id="90141">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>5</label>
+					<onclick>ActivateWindow(Settings)</onclick>
+				</control>
+				<control type="button" id="90142">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>7</label>
+					<onclick>ActivateWindow(FileManager)</onclick>
+				</control>
+				<control type="button" id="90143">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>13200</label>
+					<onclick>ActivateWindow(Profiles)</onclick>
+				</control>
+				<control type="button" id="90144">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>130</label>
+					<onclick>ActivateWindow(SystemInfo)</onclick>
+				</control>
+				<control type="button" id="90145">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>470</label>
+					<onclick>ActivateWindow(Credits)</onclick>
+					<visible>False</visible>
+				</control>
+				<!-- WHEN CLEAN HOME SELECTED (shutdown, play dvd etc added to settings submenu -->
+				<control type="button" id="901451">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>13005</label>
+					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+					<visible>Skin.HasSetting(cleanHome)</visible>
+				</control>
+				<control type="button" id="901452">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>1036</label>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<visible>Skin.HasSetting(cleanHome)</visible>
+				</control>
+				<control type="button" id="901453">
+					<include>ButtonHomeSubCommonValues</include>
+					<label>446</label>
+					<onclick>XBMC.PlayDVD()</onclick>
+					<visible>Skin.HasSetting(cleanHome)</visible>
+				</control>
+                <control type="button" id="901454">
+                    <include>ButtonHomeSubCommonValues</include>
+                    <label>PleXBMC Settings</label>
+                    <onclick>XBMC.RunScript(plugin.video.plexbmc,setting)</onclick>
+                </control>
+                
+			</control>
+
+			<!-- Addon Submenu -->
+			<control type="grouplist" id="9015"> <!-- Addon Mod -->
+				<posx>10</posx>
+				<posy>0</posy>
+				<width>240</width>
+				<height>240</height>
+				<align>center</align>
+				<onleft>9000</onleft>
+				<onright>9001</onright>
+				<onup>9015</onup>
+				<ondown>9015</ondown>
+				<itemgap>0</itemgap>
+				<visible>Container(9000).HasFocus(18) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
+				<control type="button" id="90151">
+				<include>ButtonHomeSubCommonValues</include>
+					<description>Button1</description>
+					<label>$INFO[Skin.String(HomeScriptButton1_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeScriptButton1_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))</visible>
+				</control>
+				<control type="button" id="90152">
+				<include>ButtonHomeSubCommonValues</include>
+					<description>Button2</description>
+					<label>$INFO[Skin.String(HomeScriptButton2_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeScriptButton2_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))</visible>
+				</control>
+				<control type="button" id="90153">
+				<include>ButtonHomeSubCommonValues</include>
+					<description>Button3</description>
+					<label>$INFO[Skin.String(HomeScriptButton3_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeScriptButton3_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))</visible>
+				</control>
+				<control type="button" id="90154">
+				<include>ButtonHomeSubCommonValues</include>
+					<description>Button4</description>
+					<label>$INFO[Skin.String(HomeScriptButton4_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeScriptButton4_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))</visible>
+				</control>
+				<control type="button" id="90155">
+				<include>ButtonHomeSubCommonValues</include>
+					<description>Button5</description>
+					<label>$INFO[Skin.String(HomeScriptButton5_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeScriptButton5_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))</visible>
+				</control>
+				<control type="button" id="90156">
+				<include>ButtonHomeSubCommonValues</include>
+					<description>Button6</description>
+					<label>$INFO[Skin.String(HomeScriptButton6_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeScriptButton6_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))</visible>
+				</control>
+				<control type="button" id="90157">
+				<include>ButtonHomeSubCommonValues</include>
+				<description>Button1</description>
+						<label>$INFO[Skin.String(HomeappButton1_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeappButton1_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeappButton1) + !IsEmpty(Skin.String(HomeappButton1_label))</visible>
+				</control>
+				<control type="button" id="90158">
+				<include>ButtonHomeSubCommonValues</include>
+				<description>Button2</description>
+						<label>$INFO[Skin.String(HomeappButton2_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeappButton2_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeappButton2) + !IsEmpty(Skin.String(HomeappButton2_label))</visible>
+				</control>
+				<control type="button" id="90159">
+				<include>ButtonHomeSubCommonValues</include>
+				<description>Button3</description>
+						<label>$INFO[Skin.String(HomeappButton3_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeappButton3_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeappButton3) + !IsEmpty(Skin.String(HomeappButton3_label))</visible>
+				</control>
+				<control type="button" id="90160">
+				<include>ButtonHomeSubCommonValues</include>
+				<description>Button4</description>
+						<label>$INFO[Skin.String(HomeappButton4_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeappButton4_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeappButton4) + !IsEmpty(Skin.String(HomeappButton4_label))</visible>
+				</control>
+				<control type="button" id="90161">
+				<include>ButtonHomeSubCommonValues</include>
+				<description>Button5</description>
+						<label>$INFO[Skin.String(HomeappButton5_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeappButton5_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeappButton5) + !IsEmpty(Skin.String(HomeappButton5_label))</visible>
+				</control>
+			</control>
+
+			<!-- MOVIES SUBMENU -->
+			<control type="grouplist" id="9016">
+				<posx>10</posx>
+				<posy>30</posy>
+				<width>240</width>
+				<height>600</height>
+				<align>center</align>
+				<onleft>9000</onleft>
+				<onright>Control.SetFocus(8000,0)</onright>
+				<onup>9016</onup>
+				<ondown>9016</ondown>
+				<itemgap>0</itemgap>
+				<visible>Container(9000).HasFocus(1)</visible>
+				
+				
+				<!-- Attention changed ID From Here Butchabay 1.2.4 -->
+				
+				<!-- SearchSUBMENU Butchabay -->
+				<control type="button" id="901620">
+						<label>31331</label>
+						<include>ButtonHomeSubCommonValues</include>
+						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+						<onclick>SendClick(8)</onclick>
+					</control>
+					
+				<control type="button" id="90162">
+						<label>1219</label>
+						<include>ButtonHomeSubCommonValues</include>
+						<onclick>ActivateWindow(VideoFiles)</onclick>
+						<visible>!Skin.HasSetting(hidemovievideofiles)</visible>
+					</control>
+					<control type="button" id="90163">
+						<label>369</label>
+						<include>ButtonHomeSubCommonValues</include>
+						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+						<visible>!Skin.HasSetting(hidemovietitle)</visible>
+					</control>
+					<control type="button" id="90164">
+						<label>135</label>
+						<include>ButtonHomeSubCommonValues</include>
+						<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+						<visible>!Skin.HasSetting(hidemoviegenre)</visible>
+					</control>
+					<control type="button" id="90165">
+						<label>652</label>
+						<include>ButtonHomeSubCommonValues</include>
+						<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
+						<visible>!Skin.HasSetting(hidemovieyears)</visible>
+					</control>
+					<control type="button" id="90166">
+						<label>31328</label>
+						<include>ButtonHomeSubCommonValues</include>
+						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+						<visible>!Skin.HasSetting(hidemovierecently)</visible>
+					</control>
+					<control type="button" id="90167">
+						<label>344</label>
+						<include>ButtonHomeSubCommonValues</include>
+						<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
+						<visible>!Skin.HasSetting(hidemovieactor)</visible>
+					</control>
+					<control type="button" id="90168">
+						<label>20348</label>
+						<include>ButtonHomeSubCommonValues</include>
+						<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
+						<visible>!Skin.HasSetting(hidemoviedirector)</visible>
+					</control>
+					<control type="button" id="90169">
+						<label>653</label>
+						<include>ButtonHomeSubCommonValues</include>
+						<onclick>UpdateLibrary(Video)</onclick>
+						<visible>!Skin.HasSetting(hidemovieupdate)</visible>
+					</control>
+					<control type="button" id="90170">
+						<label>Video Addons</label>
+						<include>ButtonHomeSubCommonValues</include>
+						<onclick>ActivateWindow(VideoLibrary,Plugins)</onclick>
+						<visible>!Skin.HasSetting(hidemovievideoaddon)</visible>
+					</control>
+					<control type="button" id="90171">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(movieplaylistButton1_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(movieplaylistButton1_Path)]</onclick>
+						<visible>Skin.HasSetting(movieplaylistButton1) + !IsEmpty(Skin.String(movieplaylistButton1_label))</visible>
+					</control>
+					<control type="button" id="90172">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(movieplaylistButton2_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(movieplaylistButton2_Path)]</onclick>
+						<visible>Skin.HasSetting(movieplaylistButton2) + !IsEmpty(Skin.String(movieplaylistButton2_label))</visible>
+					</control>
+					<control type="button" id="90173">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(movieplaylistButton3_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(movieplaylistButton3_Path)]</onclick>
+						<visible>Skin.HasSetting(movieplaylistButton3) + !IsEmpty(Skin.String(movieplaylistButton3_label))</visible>
+					</control>
+					<control type="button" id="90174">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(movieplaylistButton4_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(movieplaylistButton4_Path)]</onclick>
+						<visible>Skin.HasSetting(movieplaylistButton4) + !IsEmpty(Skin.String(movieplaylistButton4_label))</visible>
+					</control>
+					<control type="button" id="90175">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(movieplaylistButton5_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(movieplaylistButton5_Path)]</onclick>
+						<visible>Skin.HasSetting(movieplaylistButton5) + !IsEmpty(Skin.String(movieplaylistButton5_label))</visible>
+					</control>
+					<control type="button" id="90176">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(movieplaylistButton6_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(movieplaylistButton6_Path)]</onclick>
+						<visible>Skin.HasSetting(movieplaylistButton6) + !IsEmpty(Skin.String(movieplaylistButton6_label))</visible>
+					</control>
+					<control type="button" id="90177">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(MovieScriptButton1_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(MovieScriptButton1_Path)]</onclick>
+						<visible>Skin.HasSetting(MovieScriptButton1) + !IsEmpty(Skin.String(MovieScriptButton1_label))</visible>
+					</control>
+					<control type="button" id="90178">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(MovieScriptButton2_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(MovieScriptButton2_Path)]</onclick>
+						<visible>Skin.HasSetting(MovieScriptButton2) + !IsEmpty(Skin.String(MovieScriptButton2_label))</visible>
+					</control>
+					<control type="button" id="90179"> 
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(MovieScriptButton3_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(MovieScriptButton3_Path)]</onclick>
+						<visible>Skin.HasSetting(MovieScriptButton3) + !IsEmpty(Skin.String(MovieScriptButton3_label))</visible>
+					</control>
+					<!-- TO HERE Butchabay 1.2.4 -->
+					<!-- Custom Favourites Movies Butchabay 1.2.4 -->
+					<control type="button" id="90180"> 
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(MovieButton20_label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom20_Path)]</onclick>
+						<visible>Skin.HasSetting(MovieButton20) + !IsEmpty(Skin.String(MovieButton20_label))</visible>
+					</control>
+					<control type="button" id="90181"> 
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(MovieButton21_label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom21_Path)]</onclick>
+						<visible>Skin.HasSetting(MovieButton21) + !IsEmpty(Skin.String(MovieButton21_label))</visible>
+					</control>
+					<control type="button" id="90182"> 
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(MovieButton22_label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom22_Path)]</onclick>
+						<visible>Skin.HasSetting(MovieButton22) + !IsEmpty(Skin.String(MovieButton22_label))</visible>
+					</control>
+					<control type="button" id="90183"> 
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(MovieButton23_label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom23_Path)]</onclick>
+						<visible>Skin.HasSetting(MovieButton23) + !IsEmpty(Skin.String(MovieButton23_label))</visible>
+					</control>
+					<control type="button" id="90184"> 
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(MovieButton24_label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom24_Path)]</onclick>
+						<visible>Skin.HasSetting(MovieButton24) + !IsEmpty(Skin.String(MovieButton24_label))</visible>
+					</control>
+					<!-- Custom Favourites Movies Butchabay END 1.2.4 -->
+			</control>
+ 
+			<!-- TV SHOWS SUBMENU -->
+			<control type="grouplist" id="9019"><!-- Changed ID Butchabay 1.2.4 -->
+				<posx>10</posx>
+				<posy>50</posy>
+				<width>240</width>
+				<height>600</height>
+				<align>center</align>
+				<onleft>9000</onleft>
+				<onright>Control.SetFocus(8001,0)</onright>
+				<onup>9019</onup>
+				<ondown>9019</ondown>
+				<itemgap>0</itemgap>
+				<visible>Container(9000).HasFocus(7)</visible>
+				<!-- ATTENTION CHANGED ID BUTCHABAY FROM HERE 1.2.4 -->
+				
+				<!-- SearchSUBMENU Butchabay -->
+				<control type="button" id="901900">
+						<label>31331</label>
+						<include>ButtonHomeSubCommonValues</include>
+						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
+						<onclick>SendClick(8)</onclick>
+					</control>
+				<control type="button" id="90190">
+				<include>ButtonHomeSubCommonValues</include>
+						<label>369</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
+						<visible>!Skin.HasSetting(hidetvtitle)</visible>
+					</control>
+					<control type="button" id="90191">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>135</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowGenres,return)</onclick>
+						<visible>!Skin.HasSetting(hidetvgenre)</visible>
+					</control>
+					<control type="button" id="90192">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>652</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowYears,return)</onclick>
+						<visible>!Skin.HasSetting(hidetvyears)</visible>
+					</control>
+					<control type="button" id="90193">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>344</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowActors,return)</onclick>
+						<visible>!Skin.HasSetting(hidetvactor)</visible>
+					</control>
+					<control type="button" id="90194">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>31328</label>
+						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
+						<visible>!Skin.HasSetting(hidetvrecently)</visible>	
+					</control>
+					<control type="button" id="90195">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>653</label>
+						<onclick>UpdateLibrary(Video)</onclick>
+						<visible>!Skin.HasSetting(hidetvupdate)</visible>
+					</control>
+					<control type="button" id="90196">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(tvplaylistButton1_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(tvplaylistButton1_Path)]</onclick>
+						<visible>Skin.HasSetting(tvplaylistButton1) + !IsEmpty(Skin.String(tvplaylistButton1_label))</visible>
+					</control>
+					<control type="button" id="90197">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(tvplaylistButton2_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(tvplaylistButton2_Path)]</onclick>
+						<visible>Skin.HasSetting(tvplaylistButton2) + !IsEmpty(Skin.String(tvplaylistButton2_label))</visible>
+					</control>
+					<control type="button" id="90198">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(tvplaylistButton3_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(tvplaylistButton3_Path)]</onclick>
+						<visible>Skin.HasSetting(tvplaylistButton3) + !IsEmpty(Skin.String(tvplaylistButton3_label))</visible>
+					</control>
+					<control type="button" id="90199">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(tvplaylistButton4_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(tvplaylistButton4_Path)]</onclick>
+						<visible>Skin.HasSetting(tvplaylistButton4) + !IsEmpty(Skin.String(tvplaylistButton4_label))</visible>
+					</control>
+					<control type="button" id="90200">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(tvplaylistButton5_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(tvplaylistButton5_Path)]</onclick>
+						<visible>Skin.HasSetting(tvplaylistButton5) + !IsEmpty(Skin.String(tvplaylistButton5_label))</visible>
+					</control>
+					<control type="button" id="90201">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(tvplaylistButton6_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(tvplaylistButton6_Path)]</onclick>
+						<visible>Skin.HasSetting(tvplaylistButton6) + !IsEmpty(Skin.String(tvplaylistButton6_label))</visible>
+					</control>
+					<control type="button" id="90202">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeTVButton1_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeTVButton1_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeTVButton1) + !IsEmpty(Skin.String(HomeTVButton1_label))</visible>
+					</control>
+					<control type="button" id="90203">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeTVButton2_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeTVButton2_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeTVButton2) + !IsEmpty(Skin.String(HomeTVButton2_label))</visible>
+					</control>
+					<control type="button" id="90204">
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeTVButton3_label)]</label>
+						<onclick>Setfocus(9000)</onclick>
+						<onclick>$INFO[Skin.String(HomeTVButton3_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeTVButton3) + !IsEmpty(Skin.String(HomeTVButton3_label))</visible>
+					</control>
+					<!-- TO HERE BUTCHABAY 1.2.4 -->
+					<!-- Custom Favourites TV Shows Butchabay 1.2.4 -->
+					<control type="button" id="90205"> 
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeTVbutton25_label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom25_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeTVbutton25) + !IsEmpty(Skin.String(HomeTVbutton25_label))</visible>
+					</control>
+					<control type="button" id="90206"> 
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeTVbutton26_label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom26_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeTVbutton26) + !IsEmpty(Skin.String(HomeTVbutton26_label))</visible>
+					</control>
+					<control type="button" id="90207"> 
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeTVbutton27_label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom27_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeTVbutton27) + !IsEmpty(Skin.String(HomeTVbutton27_label))</visible>
+					</control>
+					<control type="button" id="90208"> 
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeTVbutton28_label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom28_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeTVbutton28) + !IsEmpty(Skin.String(HomeTVbutton28_label))</visible>
+					</control>
+					<control type="button" id="90209"> 
+					<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeTVbutton29_label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom29_Path)]</onclick>
+						<visible>Skin.HasSetting(HomeTVbutton29) + !IsEmpty(Skin.String(HomeTVbutton29_label))</visible>
+					</control>
+					<!-- Custom Favourites TV Shows Butchabay END 1.2.4 -->
+					<control type="button" id="90210">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>31187</label>
+						<onclick>ActivateWindow(1115)</onclick>
+						<visible>Library.HasContent(TVShows)</visible>
+					</control>
+			</control>
+		</control>
+
+	</include>    
+    
+    
+</includes>

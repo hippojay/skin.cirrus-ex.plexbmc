@@ -1,5 +1,5 @@
 <window id="0">
-<defaultcontrol always="true">8999</defaultcontrol>
+<defaultcontrol always="true">8998</defaultcontrol>
 <allowoverlay>no</allowoverlay>  
 <controls>
 <!-- Changes Begin Butchabay MOD 1.2.0 -->
@@ -162,14 +162,30 @@
     <control type="group">
   
     <!-- SUBMENUS -->
-    <include condition="!Skin.HasSetting(horzHomeMenu)">HomeSubmenu</include>
-    <include condition="Skin.HasSetting(horzHomeMenu) + !Skin.HasSetting(horzLowHomeMenu)">HomeHorzSubmenu</include>
-    <include condition="Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(horzLowHomeMenu)">HomeHorzLowSubmenu</include>
+    <include condition="!Skin.HasSetting(horzHomeMenu)+!Skin.HasSetting(plexbmcok)">HomeSubmenu</include>
+    <include condition="Skin.HasSetting(horzHomeMenu) + !Skin.HasSetting(horzLowHomeMenu)+!Skin.HasSetting(plexbmcok)">HomeHorzSubmenu</include>
+    <include condition="Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(horzLowHomeMenu)+!Skin.HasSetting(plexbmcok)">HomeHorzLowSubmenu</include>
+    <include condition="Skin.HasSetting(plexbmcok)">PlexSubMenu</include>
 
+    
 	 <!-- Custom Offset -->
 	 
 	<include condition="!Skin.HasSetting(customstartupfocus)">StartUpNoCustomfocus</include>
     <include condition="Skin.HasSetting(customstartupfocus)">StartupCustomFocus</include>
+    <!--- PLEXBMC MOD -->
+    <control type="button" id="8998">
+      <description>run plexbmc plugin if needed</description>
+      <posx>-20</posx>
+      <posy>-20</posy>
+      <width>1</width>
+      <height>1</height>
+      <label>-</label>
+      <font>-</font>
+      <include condition="Skin.HasSetting(plexbmcok)">runplexbmcplugin</include>    
+      <onfocus>SetFocus(8999)</onfocus>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+    </control>  
 	
     <!-- RECENTLY ADDED -->
     <control type="button" id="8999">
@@ -183,9 +199,9 @@
 	   <!-- Changes for nightly Builds-->
       <!-- <onfocus>XBMC.RunScript(script.randomitems,limit=8&amp;unplayed=True)</onfocus>
 		<onfocus>XBMC.RunScript(script.tv.show.next.aired,silent=True)</onfocus> -->
-	  <!---------------------------------------->
 	  <onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=8&amp;totals=True&amp;albums=True&amp;unplayed=True)</onfocus>
 	  <onfocus>XBMC.RunScript(special://skin/scripts/RandomItems.py,limit=8&amp;unplayed=True)</onfocus>
+      <onfocus>XBMC.RunScript(plugin.video.plexbmc,skin)</onfocus>
       <onfocus>SetFocus(9000)</onfocus>
       <texturenofocus>-</texturenofocus>
       <texturefocus>-</texturefocus>
@@ -203,6 +219,7 @@
       <texturenofocus>-</texturenofocus>
       <texturefocus>-</texturefocus>
       <visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+      
     </control>
 	<!-- Weather Plus Widget Beginning -->
 		<control type="group">
@@ -512,8 +529,9 @@
 
 
     <!-- MAIN MENUS -->
-    <include condition="!Skin.HasSetting(horzHomeMenu)">HomeMainMenu</include>
-    <include condition="Skin.HasSetting(horzHomeMenu)">HomeMainMenuHorz</include>
+    <include condition="!Skin.HasSetting(horzHomeMenu) + !Skin.HasSetting(plexbmcok)">HomeMainMenu</include>
+    <include condition="Skin.HasSetting(horzHomeMenu) + !Skin.HasSetting(plexbmcok)">HomeMainMenuHorz</include>
+    <include condition="!Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(plexbmcok)">PlexMainMenu</include>
 <!-- Changes Begin Butchabay MOD 1.2.0 -->
 	  <control type="image">
 	  <posx>0</posx>
@@ -533,25 +551,69 @@
 	  <visible>!Skin.HasSetting(cleanHome) | !Skin.HasSetting(homeNoClock)</visible>
 	</control>
 	<!-- Changes End Butchabay MOD 1.2.0 -->
-    <control type="image">
-      <description>LOGO</description>
-      <posx>10</posx>
-      <posy>10</posy>
-      <width>160</width>
-      <height>40</height>
-      <texture>xbmc_logo_white.png</texture>
-      <visible>!Skin.HasSetting(cleanHome)</visible>
+    <control type="group">
+        <visible>!skin.hasSetting(plexbmcok)</visible>
+        <visible>!Skin.hasSetting(cleanhome)</visible>
+        <control type="image">
+          <description>LOGO</description>
+          <posx>10</posx>
+          <posy>10</posy>
+          <width>160</width>
+          <height>40</height>
+          <texture>xbmc_logo_white.png</texture>
+        </control>
+        <control type="image">
+          <description>LOGO Mirror</description>
+          <posx>10</posx>
+          <posy>50</posy>
+          <width>160</width>
+          <height>40</height>
+          <texture>xbmc_logo_white_reflection.png</texture>
+        </control>
     </control>
-    <control type="image">
-      <description>LOGO Mirror</description>
-      <posx>10</posx>
-      <posy>50</posy>
-      <width>160</width>
-      <height>40</height>
-       <texture>xbmc_logo_white_reflection.png</texture>
-      <visible>!Skin.HasSetting(cleanHome)</visible>
-    </control>
-
+            <control type="group">
+                <visible>skin.hasSetting(plexbmcok)</visible>
+                <control type="image">
+                    <description>LOGO</description>
+                    <posx>10</posx>
+                    <posy>10</posy>
+                    <width>140</width>
+                    <height>60</height>
+                    <texture>logo.png</texture>
+                </control>
+                <control type="image">
+                    <description>LOGO Mirror</description>
+                    <posx>10</posx>
+                    <posy>42</posy>
+                    <width>140</width>
+                    <height>60</height>
+                    <texture diffuse="diffuse_mirror.png" flipy="true">logo.png</texture>
+                </control>
+                <control type="label">
+                    <posx>150</posx>
+                    <posy>25</posy>
+                    <width>30</width>
+                    <height>60</height>
+                    <font>font12</font>
+                    <label>on</label>
+                </control>
+                <control type="image">
+                    <description>LOGO</description>
+                    <posx>180</posx>
+                    <posy>14</posy>
+                    <width>140</width>
+                    <height>40</height>
+                    <texture>xbmc_logo_white.png</texture>
+                </control>
+                <control type="image">
+                    <description>LOGO Mirror</description>
+                    <posx>180</posx>
+                    <posy>50</posy>
+                    <width>140</width>
+                    <height>40</height>
+                    <texture diffuse="diffuse_mirror.png" flipy="true">xbmc_logo_white.png</texture>
+                </control>
+            </control>     
     <!-- BUTTONS BOTTOM LEFT (not visible if cleanHome selected -->
     <control type="group" id="10">
       <posx>1140</posx>

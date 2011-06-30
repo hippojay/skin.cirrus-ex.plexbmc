@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.cirrus extended v2" version="2.04" name="cirrus extended v2" provider-name="Butchabay and Malexx">
+<addon id="skin.cirrus-ex.plexbmc" version="0.1-2.0" name="cirrus extended v2 - plexbmc" provider-name="Butchabay and Malexx. modded by hippojay">
 	<requires>
 		<import addon="xbmc.gui" version="2.11"/>
 			<import addon="script.recentlyadded" version="1.0.8"/>
@@ -10,7 +10,7 @@
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<minversion app="xbmc">33035</minversion>
-		<summary>Skin Created by Crookas - Modded by Butchabay and Malexx</summary>
+		<summary>Skin Created by Crookas - Modded by Butchabay and Malexx.  Modded for PleXBMC by hippojay</summary>
 		<description>Mod based on Cirrus - Goal is to keep the Original Look and Functions and extend them to use all the Fun Stuff XBMC has to offer</description>
 	</extension>
 </addon>

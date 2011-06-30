@@ -6,7 +6,7 @@
 			<width>75</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoResolution,flagging/video/,.png]</texture>
+			<texture>$INFO[ListItem.Property(VideoResolution),flagging/video/,.png]</texture>
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
@@ -14,7 +14,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/xvid.png</texture>
-			<visible>substring(ListItem.VideoCodec,xvid)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),xvid)</visible>
 		</control>
 		<control type="image">
 			<description>Divx Codec Image</description>
@@ -22,7 +22,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/divx.png</texture>
-			<visible>substring(ListItem.VideoCodec,divx) | substring(ListItem.VideoCodec,div3) |substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5) | substring(ListItem.VideoCodec,dx50)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),divx) | substring(ListItem.Property(VideoCodec),div3) |substring(ListItem.Property(VideoCodec),div4) | substring(ListItem.Property(VideoCodec),div5) | substring(ListItem.Property(VideoCodec),dx50)</visible>
 		</control>
 		<control type="image">
 			<description>h264 Codec Image</description>
@@ -30,7 +30,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/h264.png</texture>
-			<visible>substring(ListItem.VideoCodec,h264)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),h264)</visible>
 		</control>
 		<control type="image">
 			<description>avc1 Codec Image</description>
@@ -38,7 +38,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/avc1.png</texture>
-			<visible>substring(ListItem.VideoCodec,avc1)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),avc1)</visible>
 		</control>
 		<control type="image">
 			<description>wvc1 Codec Image</description>
@@ -46,7 +46,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/wvc1.png</texture>
-			<visible>substring(ListItem.VideoCodec,wvc1)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),wvc1)</visible>
 		</control>
 		<control type="image">
 			<description>vc1 Codec Image</description>
@@ -54,7 +54,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vc-1.png</texture>
-			<visible>substring(ListItem.VideoCodec,vc1)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),vc1)</visible>
 		</control>
 		<control type="image">
 			<description>mpeg1video Codec Image</description>
@@ -62,7 +62,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/mpeg1video.png</texture>
-			<visible>substring(ListItem.VideoCodec,mpeg1video)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),mpeg1video)</visible>
 		</control>
 		<control type="image">
 			<description>mpeg2video Codec Image</description>
@@ -70,7 +70,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/mpeg2video.png</texture>
-			<visible>substring(ListItem.VideoCodec,mpeg2video)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),mpeg2video)</visible>
 		</control>
 	</include>
 
@@ -81,7 +81,7 @@
 			<width>75</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoResolution,flagging/videoNew/,.png]</texture>
+			<texture>$INFO[ListItem.Property(VideoResolution),flagging/videoNew/,.png]</texture>
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
@@ -89,7 +89,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNew/xvid.png</texture>
-			<visible>substring(ListItem.VideoCodec,xvid)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),xvid)</visible>
 		</control>
 		<control type="image">
 			<description>Divx Codec Image</description>
@@ -97,7 +97,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNew/divx.png</texture>
-			<visible>substring(ListItem.VideoCodec,divx) | substring(ListItem.VideoCodec,div3) |substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5) | substring(ListItem.VideoCodec,dx50)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),divx) | substring(ListItem.Property(VideoCodec),div3) |substring(ListItem.Property(VideoCodec),div4) | substring(ListItem.Property(VideoCodec),div5) | substring(ListItem.Property(VideoCodec),dx50)</visible>
 		</control>
 		<control type="image">
 			<description>h264 Codec Image</description>
@@ -105,7 +105,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNew/h264.png</texture>
-			<visible>substring(ListItem.VideoCodec,h264)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),h264)</visible>
 		</control>
 		<control type="image">
 			<description>avc1 Codec Image</description>
@@ -113,7 +113,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNew/avc1.png</texture>
-			<visible>substring(ListItem.VideoCodec,avc1)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),avc1)</visible>
 		</control>
 		<control type="image">
 			<description>wvc1 Codec Image</description>
@@ -121,7 +121,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNew/wvc1.png</texture>
-			<visible>substring(ListItem.VideoCodec,wvc1)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),wvc1)</visible>
 		</control>
 		<control type="image">
 			<description>vc1 Codec Image</description>
@@ -129,7 +129,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNew/vc-1.png</texture>
-			<visible>substring(ListItem.VideoCodec,vc1)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),vc1)</visible>
 		</control>
 		<control type="image">
 			<description>mpeg1video Codec Image</description>
@@ -137,7 +137,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNew/mpeg1video.png</texture>
-			<visible>substring(ListItem.VideoCodec,mpeg1video)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),mpeg1video)</visible>
 		</control>
 		<control type="image">
 			<description>mpeg2video Codec Image</description>
@@ -145,7 +145,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNew/mpeg2video.png</texture>
-			<visible>substring(ListItem.VideoCodec,mpeg2video)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),mpeg2video)</visible>
 		</control>
 	</include>
 	
@@ -156,7 +156,7 @@
 			<width>75</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoResolution,flagging/videoNewColor/,.png]</texture>
+			<texture>$INFO[ListItem.Property(VideoResolution),flagging/videoNewColor/,.png]</texture>
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
@@ -164,7 +164,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNewColor/xvid.png</texture>
-			<visible>substring(ListItem.VideoCodec,xvid)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),xvid)</visible>
 		</control>
 		<control type="image">
 			<description>Divx Codec Image</description>
@@ -172,7 +172,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNewColor/divx.png</texture>
-			<visible>substring(ListItem.VideoCodec,divx) | substring(ListItem.VideoCodec,div3) |substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5) | substring(ListItem.VideoCodec,dx50)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),divx) | substring(ListItem.Property(VideoCodec),div3) |substring(ListItem.Property(VideoCodec),div4) | substring(ListItem.Property(VideoCodec),div5) | substring(ListItem.Property(VideoCodec),dx50)</visible>
 		</control>
 		<control type="image">
 			<description>h264 Codec Image</description>
@@ -180,7 +180,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNewColor/h264.png</texture>
-			<visible>substring(ListItem.VideoCodec,h264)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),h264)</visible>
 		</control>
 		<control type="image">
 			<description>avc1 Codec Image</description>
@@ -188,7 +188,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNewColor/avc1.png</texture>
-			<visible>substring(ListItem.VideoCodec,avc1)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),avc1)</visible>
 		</control>
 		<control type="image">
 			<description>wvc1 Codec Image</description>
@@ -196,7 +196,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNewColor/wvc1.png</texture>
-			<visible>substring(ListItem.VideoCodec,wvc1)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),wvc1)</visible>
 		</control>
 		<control type="image">
 			<description>vc1 Codec Image</description>
@@ -204,7 +204,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNewColor/vc-1.png</texture>
-			<visible>substring(ListItem.VideoCodec,vc1)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),vc1)</visible>
 		</control>
 		<control type="image">
 			<description>mpeg1video Codec Image</description>
@@ -212,7 +212,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNewColor/mpeg1video.png</texture>
-			<visible>substring(ListItem.VideoCodec,mpeg1video)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),mpeg1video)</visible>
 		</control>
 		<control type="image">
 			<description>mpeg2video Codec Image</description>
@@ -220,7 +220,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/videoNewColor/mpeg2video.png</texture>
-			<visible>substring(ListItem.VideoCodec,mpeg2video)</visible>
+			<visible>substring(ListItem.Property(VideoCodec),mpeg2video)</visible>
 		</control>
 	</include>
 	
@@ -232,7 +232,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/mp3.png</texture>
-			<visible>substring(ListItem.AudioCodec,mp3)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),mp3)</visible>
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
@@ -240,7 +240,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/dts.png</texture>
-			<visible>substring(ListItem.AudioCodec,dca)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),dca)</visible>
 		</control>
 		<control type="image">
 			<description>ac3 Image</description>
@@ -248,7 +248,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/ac3.png</texture>
-			<visible>substring(ListItem.AudioCodec,ac3) + !substring(ListItem.AudioChannels,6)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),ac3) + !substring(ListItem.Property(AudioChannels),6)</visible>
 		</control>
 		<control type="image">
 			<description>aac Image</description>
@@ -256,7 +256,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/aac.png</texture>
-			<visible>substring(ListItem.AudioCodec,aac)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),aac)</visible>
 		</control>
 		<control type="image">
 			<description>Dolby Digital Image</description>
@@ -264,7 +264,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/dolbydigital.png</texture>
-			<visible>substring(ListItem.AudioCodec,ac3) + substring(ListItem.AudioChannels,6)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),ac3) + substring(ListItem.Property(AudioChannels),6)</visible>
 		</control>
 		<control type="image">
 			<description>WMA Pro Codec Image</description>
@@ -272,14 +272,14 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/wmapro.png</texture>
-			<visible>substring(ListItem.AudioCodec,wmapro)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),wmapro)</visible>
 		</control>
 		<control type="image">
 			<description>Audio Channels Image</description>
 			<width>75</width>
 			<height>28</height>
 			<aspectratio align="left">keep</aspectratio>
-			<texture>$INFO[ListItem.AudioChannels,flagging/audio/,.png]</texture>
+			<texture>$INFO[ListItem.Property(AudioChannels),flagging/audio/,.png]</texture>
 		</control>
 	</include>
 
@@ -291,7 +291,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audioNew/mp3.png</texture>
-			<visible>substring(ListItem.AudioCodec,mp3)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),mp3)</visible>
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
@@ -299,7 +299,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audioNew/dts.png</texture>
-			<visible>substring(ListItem.AudioCodec,dca)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),dca)</visible>
 		</control>
 		<control type="image">
 			<description>ac3 Image</description>
@@ -307,7 +307,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audioNew/ac3.png</texture>
-			<visible>substring(ListItem.AudioCodec,ac3) + !substring(ListItem.AudioChannels,6)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),ac3) + !substring(ListItem.Property(AudioChannels),6)</visible>
 		</control>
 		<control type="image">
 			<description>aac Image</description>
@@ -315,7 +315,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audioNew/aac.png</texture>
-			<visible>substring(ListItem.AudioCodec,aac)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),aac)</visible>
 		</control>
 		<control type="image">
 			<description>Dolby Digital Image</description>
@@ -323,7 +323,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audioNew/dolbydigital.png</texture>
-			<visible>substring(ListItem.AudioCodec,ac3) + substring(ListItem.AudioChannels,6)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),ac3) + substring(ListItem.Property(AudioChannels),6)</visible>
 		</control>
 		<control type="image">
 			<description>WMA Pro Codec Image</description>
@@ -331,14 +331,14 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audioNew/wmapro.png</texture>
-			<visible>substring(ListItem.AudioCodec,wmapro)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),wmapro)</visible>
 		</control>
 		<control type="image">
 			<description>Audio Channels Image</description>
 			<width>75</width>
 			<height>28</height>
 			<aspectratio align="left">keep</aspectratio>
-			<texture>$INFO[ListItem.AudioChannels,flagging/audioNew/,.png]</texture>
+			<texture>$INFO[ListItem.Property(AudioChannels),flagging/audioNew/,.png]</texture>
 		</control>
 	</include>
 	
@@ -350,7 +350,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audioNewColor/mp3.png</texture>
-			<visible>substring(ListItem.AudioCodec,mp3)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),mp3)</visible>
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
@@ -358,7 +358,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audioNewColor/dts.png</texture>
-			<visible>substring(ListItem.AudioCodec,dca)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),dca)</visible>
 		</control>
 		<control type="image">
 			<description>ac3 Image</description>
@@ -366,7 +366,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audioNewColor/ac3.png</texture>
-			<visible>substring(ListItem.AudioCodec,ac3) + !substring(ListItem.AudioChannels,6)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),ac3) + !substring(ListItem.Property(AudioChannels),6)</visible>
 		</control>
 		<control type="image">
 			<description>aac Image</description>
@@ -374,7 +374,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audioNewColor/aac.png</texture>
-			<visible>substring(ListItem.AudioCodec,aac)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),aac)</visible>
 		</control>
 		<control type="image">
 			<description>Dolby Digital Image</description>
@@ -382,7 +382,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audioNewColor/dolbydigital.png</texture>
-			<visible>substring(ListItem.AudioCodec,ac3) + substring(ListItem.AudioChannels,6)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),ac3) + substring(ListItem.Property(AudioChannels),6)</visible>
 		</control>
 		<control type="image">
 			<description>WMA Pro Codec Image</description>
@@ -390,14 +390,14 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audioNewColor/wmapro.png</texture>
-			<visible>substring(ListItem.AudioCodec,wmapro)</visible>
+			<visible>substring(ListItem.Property(AudioCodec),wmapro)</visible>
 		</control>
 		<control type="image">
 			<description>Audio Channels Image</description>
 			<width>75</width>
 			<height>28</height>
 			<aspectratio align="left">keep</aspectratio>
-			<texture>$INFO[ListItem.AudioChannels,flagging/audioNewColor/,.png]</texture>
+			<texture>$INFO[ListItem.Property(AudioChannels),flagging/audioNewColor/,.png]</texture>
 		</control>
 	</include>
 	
@@ -408,7 +408,7 @@
 			<width>75</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
+			<texture>$INFO[ListItem.Property(VideoAspect),flagging/aspectratio/,.png]</texture>
 		</control>
 	</include>
 
@@ -419,7 +419,7 @@
 			<width>75</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratioNew/,.png]</texture>
+			<texture>$INFO[ListItem.Property(VideoAspect),flagging/aspectratioNew/,.png]</texture>
 		</control>
 	</include>
 	
@@ -430,7 +430,7 @@
 			<width>75</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratioNewColor/,.png]</texture>
+			<texture>$INFO[ListItem.Property(VideoAspect),flagging/aspectratioNewColor/,.png]</texture>
 		</control>
 	</include>
 	

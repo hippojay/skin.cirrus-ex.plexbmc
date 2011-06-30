@@ -464,6 +464,21 @@
 					<align>left</align>
 					<aligny>center</aligny>
 				</control>
+                <!-- PLEXBMC MOD -->
+				<control type="radiobutton" id="1022">
+					<description>Enable PleXBMC</description>
+					<width>750</width>
+					<height>34</height>
+					<font>cirrus_20</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Enable PleXBMC integration</label>
+					<onclick>Skin.ToggleSetting(plexbmcok)</onclick>
+					<selected>Skin.HasSetting(plexbmcok)</selected>
+					<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+					<texturenofocus>menuitemNF.png</texturenofocus>
+                </control>
+                <!-- END PLEXBMC MOD -->
 				<control type="radiobutton" id="1022">
 					<description>Horizontal Home Menu</description>
 					<width>750</width>
