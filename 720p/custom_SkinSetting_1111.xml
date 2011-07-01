@@ -465,7 +465,7 @@
 					<aligny>center</aligny>
 				</control>
                 <!-- PLEXBMC MOD -->
-				<control type="radiobutton" id="1022">
+				<control type="radiobutton" id="1989">
 					<description>Enable PleXBMC</description>
 					<width>750</width>
 					<height>34</height>
