@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.cirrus-ex.plexbmc" version="0.1-2.0" name="cirrus extended v2 - plexbmc" provider-name="Butchabay and Malexx. modded by hippojay">
+<addon id="skin.cirrus-ex.plexbmc" version="0.2-2.0" name="cirrus extended v2 - plexbmc" provider-name="Butchabay and Malexx. modded by hippojay">
 	<requires>
 		<import addon="xbmc.gui" version="2.11"/>
 			<import addon="script.recentlyadded" version="1.0.8"/>
