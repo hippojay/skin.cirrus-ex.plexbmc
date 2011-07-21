@@ -1505,61 +1505,61 @@
                     <control type="button" id="90250">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.0.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.0.server.photo)]",return)</onclick>
+                            <onclick>ActivateWindow(Pictures,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.0.server.photo)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),0)</visible> 
                     </control>
                     <control type="button" id="90261">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.1.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.1.server.photo)]",return)</onclick>
+                            <onclick>ActivateWindow(Pictures,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.1.server.photo)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),1)</visible> 
                     </control>
                     <control type="button" id="90262">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.2.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.2.server.photo)]",return)</onclick>
+                            <onclick>ActivateWindow(Pictures,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.2.server.photo)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),2)</visible> 
                     </control>
                     <control type="button" id="90263">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.3.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.3.server.photo)]",return)</onclick>
+                            <onclick>ActivateWindow(Pictures,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.3.server.photo)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),3)</visible> 
                     </control>
                     <control type="button" id="90264">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.4.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.4.server.photo)]",return)</onclick>
+                            <onclick>ActivateWindow(Pictures,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.4.server.photo)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),4)</visible> 
                     </control>
                     <control type="button" id="90265">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.5.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.5.server.photo)]",return)</onclick>
+                            <onclick>ActivateWindow(Pictures,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.5.server.photo)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),5)</visible> 
                     </control>
                     <control type="button" id="90266">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.6.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.6.server.photo)]",return)</onclick>
+                            <onclick>ActivateWindow(Pictures,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.6.server.photo)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),6)</visible> 
                     </control>
                     <control type="button" id="90267">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.7.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.7.server.photo)]",return)</onclick>
+                            <onclick>ActivateWindow(Pictures,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.7.server.photo)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),7)</visible> 
                     </control>
                     <control type="button" id="90268">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.8.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.8.server.photo)]",return)</onclick>
+                            <onclick>ActivateWindow(Pictures,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.8.server.photo)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),8)</visible> 
                     </control>
                     <control type="button" id="90269">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.9.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.9.server.photo)]",return)</onclick>
+                            <onclick>ActivateWindow(Pictures,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.9.server.photo)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),9)</visible> 
                     </control>                    
             </control> 
@@ -1581,61 +1581,61 @@
                     <control type="button" id="90250">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.0.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.0.server.music)]",return)</onclick>
+                            <onclick>ActivateWindow(MusicFiles,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.0.server.music)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),0)</visible> 
                     </control>
                     <control type="button" id="90261">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.1.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.1.server.music)]",return)</onclick>
+                            <onclick>ActivateWindow(MusicFiles,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.1.server.music)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),1)</visible> 
                     </control>
                     <control type="button" id="90262">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.2.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.2.server.music)]",return)</onclick>
+                            <onclick>ActivateWindow(MusicFiles,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.2.server.music)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),2)</visible> 
                     </control>
                     <control type="button" id="90263">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.3.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.3.server.music)]",return)</onclick>
+                            <onclick>ActivateWindow(MusicFiles,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.3.server.music)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),3)</visible> 
                     </control>
                     <control type="button" id="90264">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.4.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.4.server.music)]",return)</onclick>
+                            <onclick>ActivateWindow(MusicFiles,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.4.server.music)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),4)</visible> 
                     </control>
                     <control type="button" id="90265">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.5.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.5.server.music)]",return)</onclick>
+                            <onclick>ActivateWindow(MusicFiles,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.5.server.music)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),5)</visible> 
                     </control>
                     <control type="button" id="90266">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.6.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.6.server.music)]",return)</onclick>
+                            <onclick>ActivateWindow(MusicFiles,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.6.server.music)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),6)</visible> 
                     </control>
                     <control type="button" id="90267">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.7.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.7.server.music)]",return)</onclick>
+                            <onclick>ActivateWindow(MusicFiles,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.7.server.music)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),7)</visible> 
                     </control>
                     <control type="button" id="90268">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.8.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.8.server.music)]",return)</onclick>
+                            <onclick>ActivateWindow(MusicFiles,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.8.server.music)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),8)</visible> 
                     </control>
                     <control type="button" id="90269">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>$INFO[Window.Property(plexbmc.9.server)]</label>
-                            <onclick>ActivateWindow(VideoLibrary,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.9.server.music)]",return)</onclick>
+                            <onclick>ActivateWindow(MusicFiles,"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.9.server.music)]",return)</onclick>
                             <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),9)</visible> 
                     </control>                    
             </control> 
