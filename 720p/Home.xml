@@ -165,7 +165,9 @@
     <include condition="!Skin.HasSetting(horzHomeMenu)+!Skin.HasSetting(plexbmcok)">HomeSubmenu</include>
     <include condition="Skin.HasSetting(horzHomeMenu) + !Skin.HasSetting(horzLowHomeMenu)+!Skin.HasSetting(plexbmcok)">HomeHorzSubmenu</include>
     <include condition="Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(horzLowHomeMenu)+!Skin.HasSetting(plexbmcok)">HomeHorzLowSubmenu</include>
-    <include condition="Skin.HasSetting(plexbmcok)">PlexSubMenu</include>
+    <include condition="!Skin.HasSetting(horzHomeMenu)+Skin.HasSetting(plexbmcok)">PlexSubMenu</include>
+    <include condition="Skin.HasSetting(horzHomeMenu) + !Skin.HasSetting(horzLowHomeMenu)+Skin.HasSetting(plexbmcok)">PlexHorzSubmenu</include>
+    <include condition="Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(horzLowHomeMenu)+Skin.HasSetting(plexbmcok)">PlexHorzLowSubmenu</include>
 
     
 	 <!-- Custom Offset -->
@@ -532,6 +534,8 @@
     <include condition="!Skin.HasSetting(horzHomeMenu) + !Skin.HasSetting(plexbmcok)">HomeMainMenu</include>
     <include condition="Skin.HasSetting(horzHomeMenu) + !Skin.HasSetting(plexbmcok)">HomeMainMenuHorz</include>
     <include condition="!Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(plexbmcok)">PlexMainMenu</include>
+    <include condition="Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(plexbmcok)">PlexMainMenuHorz</include>
+    
 <!-- Changes Begin Butchabay MOD 1.2.0 -->
 	  <control type="image">
 	  <posx>0</posx>
